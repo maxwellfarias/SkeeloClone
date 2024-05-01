@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C4B8A5872BE1666200DAB82C /* SkeeloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5862BE1666200DAB82C /* SkeeloApp.swift */; };
-		C4B8A5892BE1666200DAB82C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5882BE1666200DAB82C /* ContentView.swift */; };
 		C4B8A58B2BE1666300DAB82C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B8A58A2BE1666300DAB82C /* Assets.xcassets */; };
 		C4B8A58E2BE1666300DAB82C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B8A58D2BE1666300DAB82C /* Preview Assets.xcassets */; };
 		C4B8A5982BE1666300DAB82C /* SkeeloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5972BE1666300DAB82C /* SkeeloTests.swift */; };
@@ -20,6 +19,7 @@
 		C4B8A5C32BE1E75B00DAB82C /* BookByThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5C22BE1E75B00DAB82C /* BookByThemeModel.swift */; };
 		C4B8A5C52BE1F0AB00DAB82C /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5C42BE1F0AB00DAB82C /* BookModel.swift */; };
 		C4B8A5C82BE20A4600DAB82C /* FetchBooksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5C72BE20A4600DAB82C /* FetchBooksUseCase.swift */; };
+		C4B8A5CD2BE216D000DAB82C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5CC2BE216D000DAB82C /* TabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +42,6 @@
 /* Begin PBXFileReference section */
 		C4B8A5832BE1666200DAB82C /* Skeelo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skeelo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B8A5862BE1666200DAB82C /* SkeeloApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeeloApp.swift; sourceTree = "<group>"; };
-		C4B8A5882BE1666200DAB82C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		C4B8A58A2BE1666300DAB82C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4B8A58D2BE1666300DAB82C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C4B8A5932BE1666300DAB82C /* SkeeloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkeeloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +54,7 @@
 		C4B8A5C22BE1E75B00DAB82C /* BookByThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookByThemeModel.swift; sourceTree = "<group>"; };
 		C4B8A5C42BE1F0AB00DAB82C /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		C4B8A5C72BE20A4600DAB82C /* FetchBooksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBooksUseCase.swift; sourceTree = "<group>"; };
+		C4B8A5CC2BE216D000DAB82C /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +106,10 @@
 		C4B8A5852BE1666200DAB82C /* Skeelo */ = {
 			isa = PBXGroup;
 			children = (
+				C4B8A5C92BE2162700DAB82C /* Presentation */,
 				C4B8A5C02BE1E6E400DAB82C /* Domain */,
 				C4B8A5B72BE1E5AC00DAB82C /* Data */,
 				C4B8A5862BE1666200DAB82C /* SkeeloApp.swift */,
-				C4B8A5882BE1666200DAB82C /* ContentView.swift */,
 				C4B8A58A2BE1666300DAB82C /* Assets.xcassets */,
 				C4B8A58C2BE1666300DAB82C /* Preview Content */,
 			);
@@ -198,6 +198,38 @@
 				C4B8A5C72BE20A4600DAB82C /* FetchBooksUseCase.swift */,
 			);
 			path = "Use Case";
+			sourceTree = "<group>";
+		};
+		C4B8A5C92BE2162700DAB82C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				C4B8A5CE2BE2188200DAB82C /* New Group */,
+				C4B8A5CA2BE2169800DAB82C /* TabBarView */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		C4B8A5CA2BE2169800DAB82C /* TabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				C4B8A5CB2BE216B500DAB82C /* View */,
+			);
+			path = TabBarView;
+			sourceTree = "<group>";
+		};
+		C4B8A5CB2BE216B500DAB82C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4B8A5CC2BE216D000DAB82C /* TabBarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4B8A5CE2BE2188200DAB82C /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,9 +373,9 @@
 				C4B8A5BC2BE1E61300DAB82C /* HttpPostClient.swift in Sources */,
 				C4B8A5C32BE1E75B00DAB82C /* BookByThemeModel.swift in Sources */,
 				C4B8A5C82BE20A4600DAB82C /* FetchBooksUseCase.swift in Sources */,
-				C4B8A5892BE1666200DAB82C /* ContentView.swift in Sources */,
 				C4B8A5872BE1666200DAB82C /* SkeeloApp.swift in Sources */,
 				C4B8A5C52BE1F0AB00DAB82C /* BookModel.swift in Sources */,
+				C4B8A5CD2BE216D000DAB82C /* TabBarView.swift in Sources */,
 				C4B8A5B22BE1E0B600DAB82C /* AlamofireAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
