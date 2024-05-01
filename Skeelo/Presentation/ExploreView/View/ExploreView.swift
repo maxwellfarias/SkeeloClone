@@ -41,6 +41,7 @@ struct ExploreView: View {
                 }
             }
             .frame(maxWidth: .infinity)
+            .padding(.bottom, 10)
             
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVGrid(columns: Array(repeating: .init(.flexible()), count:2), alignment: .center, spacing: 10) {
@@ -60,7 +61,7 @@ struct ExploreView: View {
         }
         .background(.white)
         .padding(.horizontal, 15)
-        .padding(.top, 40)
+        .padding(.top, 20)
         
     }
 }
