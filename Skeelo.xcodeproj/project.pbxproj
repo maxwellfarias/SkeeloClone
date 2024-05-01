@@ -12,8 +12,8 @@
 		C4B8A58B2BE1666300DAB82C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B8A58A2BE1666300DAB82C /* Assets.xcassets */; };
 		C4B8A58E2BE1666300DAB82C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B8A58D2BE1666300DAB82C /* Preview Assets.xcassets */; };
 		C4B8A5982BE1666300DAB82C /* SkeeloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5972BE1666300DAB82C /* SkeeloTests.swift */; };
-		C4B8A5A22BE1666300DAB82C /* SkeeloUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5A12BE1666300DAB82C /* SkeeloUITests.swift */; };
-		C4B8A5A42BE1666300DAB82C /* SkeeloUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5A32BE1666300DAB82C /* SkeeloUITestsLaunchTests.swift */; };
+		C4B8A5B22BE1E0B600DAB82C /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5B12BE1E0B600DAB82C /* AlamofireAdapter.swift */; };
+		C4B8A5B62BE1E1E800DAB82C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C4B8A5B52BE1E1E800DAB82C /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,8 +42,7 @@
 		C4B8A5932BE1666300DAB82C /* SkeeloTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkeeloTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B8A5972BE1666300DAB82C /* SkeeloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeeloTests.swift; sourceTree = "<group>"; };
 		C4B8A59D2BE1666300DAB82C /* SkeeloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkeeloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C4B8A5A12BE1666300DAB82C /* SkeeloUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeeloUITests.swift; sourceTree = "<group>"; };
-		C4B8A5A32BE1666300DAB82C /* SkeeloUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeeloUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C4B8A5B12BE1E0B600DAB82C /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B8A5B62BE1E1E800DAB82C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,8 +76,8 @@
 			children = (
 				C4B8A5852BE1666200DAB82C /* Skeelo */,
 				C4B8A5962BE1666300DAB82C /* SkeeloTests */,
-				C4B8A5A02BE1666300DAB82C /* SkeeloUITests */,
 				C4B8A5842BE1666200DAB82C /* Products */,
+				C4B8A5B42BE1E1E800DAB82C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +94,7 @@
 		C4B8A5852BE1666200DAB82C /* Skeelo */ = {
 			isa = PBXGroup;
 			children = (
+				C4B8A5B02BE1E08200DAB82C /* Infra */,
 				C4B8A5862BE1666200DAB82C /* SkeeloApp.swift */,
 				C4B8A5882BE1666200DAB82C /* ContentView.swift */,
 				C4B8A58A2BE1666300DAB82C /* Assets.xcassets */,
@@ -118,13 +119,19 @@
 			path = SkeeloTests;
 			sourceTree = "<group>";
 		};
-		C4B8A5A02BE1666300DAB82C /* SkeeloUITests */ = {
+		C4B8A5B02BE1E08200DAB82C /* Infra */ = {
 			isa = PBXGroup;
 			children = (
-				C4B8A5A12BE1666300DAB82C /* SkeeloUITests.swift */,
-				C4B8A5A32BE1666300DAB82C /* SkeeloUITestsLaunchTests.swift */,
+				C4B8A5B12BE1E0B600DAB82C /* AlamofireAdapter.swift */,
 			);
-			path = SkeeloUITests;
+			path = Infra;
+			sourceTree = "<group>";
+		};
+		C4B8A5B42BE1E1E800DAB82C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +150,9 @@
 			dependencies = (
 			);
 			name = Skeelo;
+			packageProductDependencies = (
+				C4B8A5B52BE1E1E800DAB82C /* Alamofire */,
+			);
 			productName = Skeelo;
 			productReference = C4B8A5832BE1666200DAB82C /* Skeelo.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +225,9 @@
 				Base,
 			);
 			mainGroup = C4B8A57A2BE1666100DAB82C;
+			packageReferences = (
+				C4B8A5B32BE1E0E900DAB82C /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = C4B8A5842BE1666200DAB82C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,6 +272,7 @@
 			files = (
 				C4B8A5892BE1666200DAB82C /* ContentView.swift in Sources */,
 				C4B8A5872BE1666200DAB82C /* SkeeloApp.swift in Sources */,
+				C4B8A5B22BE1E0B600DAB82C /* AlamofireAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +288,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4B8A5A22BE1666300DAB82C /* SkeeloUITests.swift in Sources */,
-				C4B8A5A42BE1666300DAB82C /* SkeeloUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +434,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Skeelo/Preview Content\"";
+				DEVELOPMENT_TEAM = 3WF28HXXF7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -450,6 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Skeelo/Preview Content\"";
+				DEVELOPMENT_TEAM = 3WF28HXXF7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -582,6 +596,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C4B8A5B32BE1E0E900DAB82C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C4B8A5B52BE1E1E800DAB82C /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C4B8A5B32BE1E0E900DAB82C /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C4B8A57B2BE1666100DAB82C /* Project object */;
 }
