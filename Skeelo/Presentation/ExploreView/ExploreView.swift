@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ExploreView: View {
+    let categories: [Category] = try! Bundle.main.decode("categories.json")
+    
     var body: some View {
         VStack(spacing: 0) {
             
@@ -42,9 +44,9 @@ struct ExploreView: View {
             
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVGrid(columns: Array(repeating: .init(.flexible()), count:2), alignment: .center, spacing: 10) {
-                    ForEach(1..<15) { index in
-                        NavigationLink(destination: Text("View \(index)")) {
-                            Image("category")
+                    ForEach(categories, id: \.id) { category in
+                        NavigationLink(destination: Text("View \(category.id)")) {
+                            Image(category.cover_name)
                               .resizable()
                               .scaledToFit()
                               .cornerRadius(12)
@@ -56,6 +58,7 @@ struct ExploreView: View {
             
             Spacer()
         }
+        .background(.white)
         .padding(.horizontal, 15)
         .padding(.top, 40)
         

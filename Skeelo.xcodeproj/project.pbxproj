@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C4B0323B2BE2C51000AFB479 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = C4B0323A2BE2C51000AFB479 /* categories.json */; };
+		C4B0323D2BE2C93F00AFB479 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B0323C2BE2C93F00AFB479 /* Category.swift */; };
+		C4B032402BE2CA0300AFB479 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B0323F2BE2CA0300AFB479 /* BundleExtension.swift */; };
 		C4B8A5872BE1666200DAB82C /* SkeeloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5862BE1666200DAB82C /* SkeeloApp.swift */; };
 		C4B8A58B2BE1666300DAB82C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B8A58A2BE1666300DAB82C /* Assets.xcassets */; };
 		C4B8A58E2BE1666300DAB82C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B8A58D2BE1666300DAB82C /* Preview Assets.xcassets */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		C4B0323A2BE2C51000AFB479 /* categories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
+		C4B0323C2BE2C93F00AFB479 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		C4B0323F2BE2CA0300AFB479 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
 		C4B8A5832BE1666200DAB82C /* Skeelo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skeelo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B8A5862BE1666200DAB82C /* SkeeloApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeeloApp.swift; sourceTree = "<group>"; };
 		C4B8A58A2BE1666300DAB82C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C4B0323E2BE2C9E100AFB479 /* Extension & Helper */ = {
+			isa = PBXGroup;
+			children = (
+				C4B0323F2BE2CA0300AFB479 /* BundleExtension.swift */,
+			);
+			path = "Extension & Helper";
+			sourceTree = "<group>";
+		};
 		C4B8A57A2BE1666100DAB82C = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +124,7 @@
 		C4B8A5852BE1666200DAB82C /* Skeelo */ = {
 			isa = PBXGroup;
 			children = (
+				C4B0323E2BE2C9E100AFB479 /* Extension & Helper */,
 				C4B8A5CF2BE21AAE00DAB82C /* Core */,
 				C4B8A5C92BE2162700DAB82C /* Presentation */,
 				C4B8A5C02BE1E6E400DAB82C /* Domain */,
@@ -195,6 +208,7 @@
 			children = (
 				C4B8A5C22BE1E75B00DAB82C /* BookByThemeModel.swift */,
 				C4B8A5C42BE1F0AB00DAB82C /* BookModel.swift */,
+				C4B0323C2BE2C93F00AFB479 /* Category.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -396,6 +410,7 @@
 			files = (
 				C4B8A5D42BE21CFD00DAB82C /* ExploreView.swift in Sources */,
 				C4B8A5BA2BE1E5DC00DAB82C /* HttpError.swift in Sources */,
+				C4B032402BE2CA0300AFB479 /* BundleExtension.swift in Sources */,
 				C4B8A5BF2BE1E68300DAB82C /* ExtensionHelpers.swift in Sources */,
 				C4B8A5BC2BE1E61300DAB82C /* HttpPostClient.swift in Sources */,
 				C4B8A5C32BE1E75B00DAB82C /* BookByThemeModel.swift in Sources */,
@@ -405,6 +420,7 @@
 				C4B8A5C52BE1F0AB00DAB82C /* BookModel.swift in Sources */,
 				C4B8A5CD2BE216D000DAB82C /* TabBarView.swift in Sources */,
 				C4B8A5B22BE1E0B600DAB82C /* AlamofireAdapter.swift in Sources */,
+				C4B0323D2BE2C93F00AFB479 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -572,8 +588,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -581,9 +596,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = masteringswiftui.co.Skeelo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -601,8 +620,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -610,9 +628,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = masteringswiftui.co.Skeelo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

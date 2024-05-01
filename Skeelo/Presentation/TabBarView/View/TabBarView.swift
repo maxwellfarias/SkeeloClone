@@ -28,6 +28,7 @@ struct TabBarView: View {
             .tint(SkeeloColor.mainGreen)
         }
         .toolbarTitleDisplayMode(.inline)
+        .background(.white)
     }
 }
 
