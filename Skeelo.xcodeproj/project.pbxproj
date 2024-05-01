@@ -14,6 +14,9 @@
 		C4B8A5982BE1666300DAB82C /* SkeeloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5972BE1666300DAB82C /* SkeeloTests.swift */; };
 		C4B8A5B22BE1E0B600DAB82C /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5B12BE1E0B600DAB82C /* AlamofireAdapter.swift */; };
 		C4B8A5B62BE1E1E800DAB82C /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C4B8A5B52BE1E1E800DAB82C /* Alamofire */; };
+		C4B8A5BA2BE1E5DC00DAB82C /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5B92BE1E5DC00DAB82C /* HttpError.swift */; };
+		C4B8A5BC2BE1E61300DAB82C /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5BB2BE1E61300DAB82C /* HttpPostClient.swift */; };
+		C4B8A5BF2BE1E68300DAB82C /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5BE2BE1E68300DAB82C /* ExtensionHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +46,9 @@
 		C4B8A5972BE1666300DAB82C /* SkeeloTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeeloTests.swift; sourceTree = "<group>"; };
 		C4B8A59D2BE1666300DAB82C /* SkeeloUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkeeloUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B8A5B12BE1E0B600DAB82C /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
+		C4B8A5B92BE1E5DC00DAB82C /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
+		C4B8A5BB2BE1E61300DAB82C /* HttpPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
+		C4B8A5BE2BE1E68300DAB82C /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,7 @@
 		C4B8A5852BE1666200DAB82C /* Skeelo */ = {
 			isa = PBXGroup;
 			children = (
+				C4B8A5B72BE1E5AC00DAB82C /* Data */,
 				C4B8A5B02BE1E08200DAB82C /* Infra */,
 				C4B8A5862BE1666200DAB82C /* SkeeloApp.swift */,
 				C4B8A5882BE1666200DAB82C /* ContentView.swift */,
@@ -132,6 +139,32 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C4B8A5B72BE1E5AC00DAB82C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C4B8A5BD2BE1E67600DAB82C /* Helpers */,
+				C4B8A5B82BE1E5B400DAB82C /* Http */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C4B8A5B82BE1E5B400DAB82C /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				C4B8A5B92BE1E5DC00DAB82C /* HttpError.swift */,
+				C4B8A5BB2BE1E61300DAB82C /* HttpPostClient.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		C4B8A5BD2BE1E67600DAB82C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C4B8A5BE2BE1E68300DAB82C /* ExtensionHelpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +303,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B8A5BA2BE1E5DC00DAB82C /* HttpError.swift in Sources */,
+				C4B8A5BF2BE1E68300DAB82C /* ExtensionHelpers.swift in Sources */,
+				C4B8A5BC2BE1E61300DAB82C /* HttpPostClient.swift in Sources */,
 				C4B8A5892BE1666200DAB82C /* ContentView.swift in Sources */,
 				C4B8A5872BE1666200DAB82C /* SkeeloApp.swift in Sources */,
 				C4B8A5B22BE1E0B600DAB82C /* AlamofireAdapter.swift in Sources */,

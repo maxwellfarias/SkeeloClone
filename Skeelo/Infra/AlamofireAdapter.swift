@@ -40,21 +40,3 @@ public class AlamofireAdapter: HttpPostClient {
         }
     }
 }
-
-public enum HttpError: Error {
-    case noConnectivity
-    case badRequest
-    case serverError
-    case unauthorized
-    case forbidden
-}
-
-public protocol HttpPostClient {
-    func fetchBooksBySubject(to url: URL, completion: @escaping (Result<Data?, HttpError>) -> Void)
-}
-
-public extension Data {
-    func toModel<T:Decodable>() -> T? {
-        return try? JSONDecoder().decode(T.self, from: self)
-    }
-}
