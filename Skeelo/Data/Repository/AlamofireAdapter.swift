@@ -18,7 +18,7 @@ class AlamofireAdapter: HttpPostClient {
         self.session = session
     }
     
-    func fetchBooksBy(path: Endpoint, keyValue: String, completion: @escaping (Result<Data?, HttpError>) -> Void) {
+    func fetchBooks(path: Endpoint, keyValue: String, completion: @escaping (Result<Data?, HttpError>) -> Void) {
         guard let url = completeUrl(path: path, keyValue: keyValue) else {
             completion(.failure(.badRequest))
             return

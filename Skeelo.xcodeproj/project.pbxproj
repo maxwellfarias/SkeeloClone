@@ -19,6 +19,7 @@
 		C4B8A5BF2BE1E68300DAB82C /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5BE2BE1E68300DAB82C /* ExtensionHelpers.swift */; };
 		C4B8A5C32BE1E75B00DAB82C /* BookByThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5C22BE1E75B00DAB82C /* BookByThemeModel.swift */; };
 		C4B8A5C52BE1F0AB00DAB82C /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5C42BE1F0AB00DAB82C /* BookModel.swift */; };
+		C4B8A5C82BE20A4600DAB82C /* FetchBooksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5C72BE20A4600DAB82C /* FetchBooksUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		C4B8A5BE2BE1E68300DAB82C /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
 		C4B8A5C22BE1E75B00DAB82C /* BookByThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookByThemeModel.swift; sourceTree = "<group>"; };
 		C4B8A5C42BE1F0AB00DAB82C /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
+		C4B8A5C72BE20A4600DAB82C /* FetchBooksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBooksUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +108,6 @@
 			children = (
 				C4B8A5C02BE1E6E400DAB82C /* Domain */,
 				C4B8A5B72BE1E5AC00DAB82C /* Data */,
-				C4B8A5B02BE1E08200DAB82C /* Infra */,
 				C4B8A5862BE1666200DAB82C /* SkeeloApp.swift */,
 				C4B8A5882BE1666200DAB82C /* ContentView.swift */,
 				C4B8A58A2BE1666300DAB82C /* Assets.xcassets */,
@@ -131,12 +132,12 @@
 			path = SkeeloTests;
 			sourceTree = "<group>";
 		};
-		C4B8A5B02BE1E08200DAB82C /* Infra */ = {
+		C4B8A5B02BE1E08200DAB82C /* Repository */ = {
 			isa = PBXGroup;
 			children = (
 				C4B8A5B12BE1E0B600DAB82C /* AlamofireAdapter.swift */,
 			);
-			path = Infra;
+			path = Repository;
 			sourceTree = "<group>";
 		};
 		C4B8A5B42BE1E1E800DAB82C /* Frameworks */ = {
@@ -149,6 +150,7 @@
 		C4B8A5B72BE1E5AC00DAB82C /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				C4B8A5B02BE1E08200DAB82C /* Repository */,
 				C4B8A5BD2BE1E67600DAB82C /* Helpers */,
 				C4B8A5B82BE1E5B400DAB82C /* Http */,
 			);
@@ -175,6 +177,7 @@
 		C4B8A5C02BE1E6E400DAB82C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				C4B8A5C62BE209D500DAB82C /* Use Case */,
 				C4B8A5C12BE1E6F600DAB82C /* Models */,
 			);
 			path = Domain;
@@ -187,6 +190,14 @@
 				C4B8A5C42BE1F0AB00DAB82C /* BookModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C4B8A5C62BE209D500DAB82C /* Use Case */ = {
+			isa = PBXGroup;
+			children = (
+				C4B8A5C72BE20A4600DAB82C /* FetchBooksUseCase.swift */,
+			);
+			path = "Use Case";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +340,7 @@
 				C4B8A5BF2BE1E68300DAB82C /* ExtensionHelpers.swift in Sources */,
 				C4B8A5BC2BE1E61300DAB82C /* HttpPostClient.swift in Sources */,
 				C4B8A5C32BE1E75B00DAB82C /* BookByThemeModel.swift in Sources */,
+				C4B8A5C82BE20A4600DAB82C /* FetchBooksUseCase.swift in Sources */,
 				C4B8A5892BE1666200DAB82C /* ContentView.swift in Sources */,
 				C4B8A5872BE1666200DAB82C /* SkeeloApp.swift in Sources */,
 				C4B8A5C52BE1F0AB00DAB82C /* BookModel.swift in Sources */,

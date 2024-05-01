@@ -8,7 +8,7 @@
 import Foundation
 
 protocol HttpPostClient {
-    func fetchBooksBy(path: Endpoint, keyValue: String, completion: @escaping (Result<Data?, HttpError>) -> Void)
+    func fetchBooks(path: Endpoint, keyValue: String, completion: @escaping (Result<Data?, HttpError>) -> Void)
 }
 
 enum Endpoint: String {

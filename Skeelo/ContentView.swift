@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let alamofire = AlamofireAdapter()
+    let useCase = FetchBooksUseCase(httpClient: AlamofireAdapter())
     
     var body: some View {
         NavigationStack {
@@ -19,13 +19,9 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            alamofire.fetchBooksBy(path:.theme, keyValue: "war") { result in
+            useCase.fetchBooksByTheme (path: .theme, keyValue: "love") { result in
                 switch result {
-                case .success(let data):
-                    let books: Works? = data?.toModel()
-                    for book in books!.works {
-                        print(book.title)
-                    }
+                case .success(let books): print(books.works)
                 case .failure(let error): break
                 }
             }
