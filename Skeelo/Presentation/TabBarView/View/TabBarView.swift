@@ -8,32 +8,26 @@
 import SwiftUI
 
 struct TabBarView: View {
+    
     var body: some View {
         
         NavigationStack {
             TabView {
-                NavigationLink(destination: {
-                    Text("First View")
-                }, label: {
-                    Text("First View")
-                })
+                Text("Bookshelf")
                 .tabItem {
                     Image(systemName: "square.grid.2x2")
-                    Text("First")
+                    Text("Bookshelf")
                 }
                 
-                NavigationLink(destination: {
-                    Text("Second View")
-                }, label: {
-                    Text("Second View")
-                })
+                ExploreView()
                 .tabItem {
                     Image(systemName: "magnifyingglass")
-                    Text("Second")
+                    Text("Explore")
                 }
-                
             }
+            .tint(SkeeloColor.mainGreen)
         }
+        .toolbarTitleDisplayMode(.inline)
     }
 }
 

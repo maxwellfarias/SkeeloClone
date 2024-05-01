@@ -20,6 +20,8 @@
 		C4B8A5C52BE1F0AB00DAB82C /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5C42BE1F0AB00DAB82C /* BookModel.swift */; };
 		C4B8A5C82BE20A4600DAB82C /* FetchBooksUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5C72BE20A4600DAB82C /* FetchBooksUseCase.swift */; };
 		C4B8A5CD2BE216D000DAB82C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5CC2BE216D000DAB82C /* TabBarView.swift */; };
+		C4B8A5D22BE21AD000DAB82C /* SkeeloColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5D12BE21AD000DAB82C /* SkeeloColor.swift */; };
+		C4B8A5D42BE21CFD00DAB82C /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5D32BE21CFD00DAB82C /* ExploreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		C4B8A5C42BE1F0AB00DAB82C /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		C4B8A5C72BE20A4600DAB82C /* FetchBooksUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBooksUseCase.swift; sourceTree = "<group>"; };
 		C4B8A5CC2BE216D000DAB82C /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		C4B8A5D12BE21AD000DAB82C /* SkeeloColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeeloColor.swift; sourceTree = "<group>"; };
+		C4B8A5D32BE21CFD00DAB82C /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 		C4B8A5852BE1666200DAB82C /* Skeelo */ = {
 			isa = PBXGroup;
 			children = (
+				C4B8A5CF2BE21AAE00DAB82C /* Core */,
 				C4B8A5C92BE2162700DAB82C /* Presentation */,
 				C4B8A5C02BE1E6E400DAB82C /* Domain */,
 				C4B8A5B72BE1E5AC00DAB82C /* Data */,
@@ -203,7 +208,7 @@
 		C4B8A5C92BE2162700DAB82C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				C4B8A5CE2BE2188200DAB82C /* New Group */,
+				C4B8A5CE2BE2188200DAB82C /* ExploreView */,
 				C4B8A5CA2BE2169800DAB82C /* TabBarView */,
 			);
 			path = Presentation;
@@ -225,11 +230,28 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		C4B8A5CE2BE2188200DAB82C /* New Group */ = {
+		C4B8A5CE2BE2188200DAB82C /* ExploreView */ = {
 			isa = PBXGroup;
 			children = (
+				C4B8A5D32BE21CFD00DAB82C /* ExploreView.swift */,
 			);
-			path = "New Group";
+			path = ExploreView;
+			sourceTree = "<group>";
+		};
+		C4B8A5CF2BE21AAE00DAB82C /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C4B8A5D02BE21AB200DAB82C /* Constants */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C4B8A5D02BE21AB200DAB82C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C4B8A5D12BE21AD000DAB82C /* SkeeloColor.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -368,12 +390,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4B8A5D42BE21CFD00DAB82C /* ExploreView.swift in Sources */,
 				C4B8A5BA2BE1E5DC00DAB82C /* HttpError.swift in Sources */,
 				C4B8A5BF2BE1E68300DAB82C /* ExtensionHelpers.swift in Sources */,
 				C4B8A5BC2BE1E61300DAB82C /* HttpPostClient.swift in Sources */,
 				C4B8A5C32BE1E75B00DAB82C /* BookByThemeModel.swift in Sources */,
 				C4B8A5C82BE20A4600DAB82C /* FetchBooksUseCase.swift in Sources */,
 				C4B8A5872BE1666200DAB82C /* SkeeloApp.swift in Sources */,
+				C4B8A5D22BE21AD000DAB82C /* SkeeloColor.swift in Sources */,
 				C4B8A5C52BE1F0AB00DAB82C /* BookModel.swift in Sources */,
 				C4B8A5CD2BE216D000DAB82C /* TabBarView.swift in Sources */,
 				C4B8A5B22BE1E0B600DAB82C /* AlamofireAdapter.swift in Sources */,
