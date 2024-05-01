@@ -1,0 +1,58 @@
+//
+//  categories.json
+//  Skeelo
+//
+//  Created by Maxwell Farias on 01/05/24.
+//
+
+
+[
+    {
+    "id": "new books",
+    "cover_name": "new_books_category"
+    },
+    {
+    "id": "management",
+    "cover_name": "management_category"
+    },
+    {
+    "id": "art",
+    "cover_name": "art_category"
+    },
+    {
+    "id": "self help",
+    "cover_name": "self_help_category"
+    },
+    {
+    "id": "biographies",
+    "cover_name": "biographies_category"
+    },
+    {
+    "id": "science",
+    "cover_name": "science_category"
+    },
+    {
+    "id": "classics",
+    "cover_name": "classics_category"
+    },
+    {
+    "id": "humor",
+    "cover_name": "humor_category"
+    },
+    {
+    "id": "law",
+    "cover_name": "law_category"
+    },
+    {
+    "id": "education",
+    "cover_name": "education_category"
+    },
+    {
+    "id": "erotic",
+    "cover_name": "erotic_category"
+    },
+    {
+    "id": "hobbies",
+    "cover_name": "hobbies_category"
+    }
+]

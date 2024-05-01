@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4B0323B2BE2C51000AFB479 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = C4B0323A2BE2C51000AFB479 /* categories.json */; };
 		C4B8A5872BE1666200DAB82C /* SkeeloApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5862BE1666200DAB82C /* SkeeloApp.swift */; };
 		C4B8A58B2BE1666300DAB82C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B8A58A2BE1666300DAB82C /* Assets.xcassets */; };
 		C4B8A58E2BE1666300DAB82C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4B8A58D2BE1666300DAB82C /* Preview Assets.xcassets */; };
@@ -42,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C4B0323A2BE2C51000AFB479 /* categories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
 		C4B8A5832BE1666200DAB82C /* Skeelo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Skeelo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B8A5862BE1666200DAB82C /* SkeeloApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeeloApp.swift; sourceTree = "<group>"; };
 		C4B8A58A2BE1666300DAB82C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				C4B8A5D12BE21AD000DAB82C /* SkeeloColor.swift */,
+				C4B0323A2BE2C51000AFB479 /* categories.json */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4B8A58E2BE1666300DAB82C /* Preview Assets.xcassets in Resources */,
+				C4B0323B2BE2C51000AFB479 /* categories.json in Resources */,
 				C4B8A58B2BE1666300DAB82C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

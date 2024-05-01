@@ -40,7 +40,19 @@ struct ExploreView: View {
             }
             .frame(maxWidth: .infinity)
             
-            
+            ScrollView(.vertical, showsIndicators: false) {
+                LazyVGrid(columns: Array(repeating: .init(.flexible()), count:2), alignment: .center, spacing: 10) {
+                    ForEach(1..<15) { index in
+                        NavigationLink(destination: Text("View \(index)")) {
+                            Image("category")
+                              .resizable()
+                              .scaledToFit()
+                              .cornerRadius(12)
+                        }
+                    }
+                }
+                .padding(.top, 20)
+            }
             
             Spacer()
         }
