@@ -18,6 +18,7 @@
 		C4B8A5BC2BE1E61300DAB82C /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5BB2BE1E61300DAB82C /* HttpPostClient.swift */; };
 		C4B8A5BF2BE1E68300DAB82C /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5BE2BE1E68300DAB82C /* ExtensionHelpers.swift */; };
 		C4B8A5C32BE1E75B00DAB82C /* BookByThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5C22BE1E75B00DAB82C /* BookByThemeModel.swift */; };
+		C4B8A5C52BE1F0AB00DAB82C /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5C42BE1F0AB00DAB82C /* BookModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		C4B8A5BB2BE1E61300DAB82C /* HttpPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
 		C4B8A5BE2BE1E68300DAB82C /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
 		C4B8A5C22BE1E75B00DAB82C /* BookByThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookByThemeModel.swift; sourceTree = "<group>"; };
+		C4B8A5C42BE1F0AB00DAB82C /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +184,7 @@
 			isa = PBXGroup;
 			children = (
 				C4B8A5C22BE1E75B00DAB82C /* BookByThemeModel.swift */,
+				C4B8A5C42BE1F0AB00DAB82C /* BookModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				C4B8A5C32BE1E75B00DAB82C /* BookByThemeModel.swift in Sources */,
 				C4B8A5892BE1666200DAB82C /* ContentView.swift in Sources */,
 				C4B8A5872BE1666200DAB82C /* SkeeloApp.swift in Sources */,
+				C4B8A5C52BE1F0AB00DAB82C /* BookModel.swift in Sources */,
 				C4B8A5B22BE1E0B600DAB82C /* AlamofireAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

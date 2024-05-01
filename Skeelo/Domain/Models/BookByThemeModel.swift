@@ -14,11 +14,11 @@ struct Works: Decodable {
 struct BookByTheme: Decodable {
     var key: String = ""
     var title: String = ""
-    var cover_id: String = ""
-    var authors: [author] = []
+    var cover_id: Int = 0
+    var authors: [Author] = []
 }
 
-struct author: Decodable {
+struct Author: Decodable {
     var key: String = ""
     var name: String = ""
 }
