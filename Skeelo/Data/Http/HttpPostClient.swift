@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol HttpPostClient {
-    func fetchBooksBySubject(to url: URL, completion: @escaping (Result<Data?, HttpError>) -> Void)
+    func fetchBooksByTheme(to url: URL, completion: @escaping (Result<Data?, HttpError>) -> Void)
 }

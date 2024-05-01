@@ -17,6 +17,7 @@
 		C4B8A5BA2BE1E5DC00DAB82C /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5B92BE1E5DC00DAB82C /* HttpError.swift */; };
 		C4B8A5BC2BE1E61300DAB82C /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5BB2BE1E61300DAB82C /* HttpPostClient.swift */; };
 		C4B8A5BF2BE1E68300DAB82C /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5BE2BE1E68300DAB82C /* ExtensionHelpers.swift */; };
+		C4B8A5C32BE1E75B00DAB82C /* BookByThemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5C22BE1E75B00DAB82C /* BookByThemeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C4B8A5B92BE1E5DC00DAB82C /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
 		C4B8A5BB2BE1E61300DAB82C /* HttpPostClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
 		C4B8A5BE2BE1E68300DAB82C /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
+		C4B8A5C22BE1E75B00DAB82C /* BookByThemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookByThemeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		C4B8A5852BE1666200DAB82C /* Skeelo */ = {
 			isa = PBXGroup;
 			children = (
+				C4B8A5C02BE1E6E400DAB82C /* Domain */,
 				C4B8A5B72BE1E5AC00DAB82C /* Data */,
 				C4B8A5B02BE1E08200DAB82C /* Infra */,
 				C4B8A5862BE1666200DAB82C /* SkeeloApp.swift */,
@@ -165,6 +168,22 @@
 				C4B8A5BE2BE1E68300DAB82C /* ExtensionHelpers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C4B8A5C02BE1E6E400DAB82C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C4B8A5C12BE1E6F600DAB82C /* Models */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C4B8A5C12BE1E6F600DAB82C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C4B8A5C22BE1E75B00DAB82C /* BookByThemeModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +325,7 @@
 				C4B8A5BA2BE1E5DC00DAB82C /* HttpError.swift in Sources */,
 				C4B8A5BF2BE1E68300DAB82C /* ExtensionHelpers.swift in Sources */,
 				C4B8A5BC2BE1E61300DAB82C /* HttpPostClient.swift in Sources */,
+				C4B8A5C32BE1E75B00DAB82C /* BookByThemeModel.swift in Sources */,
 				C4B8A5892BE1666200DAB82C /* ContentView.swift in Sources */,
 				C4B8A5872BE1666200DAB82C /* SkeeloApp.swift in Sources */,
 				C4B8A5B22BE1E0B600DAB82C /* AlamofireAdapter.swift in Sources */,

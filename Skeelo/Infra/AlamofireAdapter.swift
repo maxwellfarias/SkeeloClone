@@ -15,7 +15,7 @@ public class AlamofireAdapter: HttpPostClient {
         self.session = session
     }
     
-    public func fetchBooksBySubject(to url: URL, completion: @escaping (Result<Data?, HttpError>) -> Void) {
+    public func fetchBooksByTheme(to url: URL, completion: @escaping (Result<Data?, HttpError>) -> Void) {
         session.request(url).responseData { dataResponse in
             guard let statusCode = dataResponse.response?.statusCode else {return completion(.failure(.noConnectivity))}
             switch dataResponse.result {
