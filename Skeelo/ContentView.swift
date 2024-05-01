@@ -19,12 +19,11 @@ struct ContentView: View {
             }
         }
         .onAppear {
-            let url = URL(string: "https://openlibrary.org/search.json?q=OL2917168W")!
-            alamofire.fetchBooksByTheme(to: url) { result in
+            alamofire.fetchBooksBy(path:.theme, keyValue: "war") { result in
                 switch result {
                 case .success(let data):
-                    let books: Docs? = data?.toModel()
-                    for book in books!.docs {
+                    let books: Works? = data?.toModel()
+                    for book in books!.works {
                         print(book.title)
                     }
                 case .failure(let error): break

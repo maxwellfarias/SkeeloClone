@@ -7,6 +7,12 @@
 
 import Foundation
 
-public protocol HttpPostClient {
-    func fetchBooksByTheme(to url: URL, completion: @escaping (Result<Data?, HttpError>) -> Void)
+protocol HttpPostClient {
+    func fetchBooksBy(path: Endpoint, keyValue: String, completion: @escaping (Result<Data?, HttpError>) -> Void)
 }
+
+enum Endpoint: String {
+    case theme = "/subjects/"
+    case id = "/search.json?q="
+}
+

@@ -8,14 +8,22 @@
 import Foundation
 import Alamofire
 
-public class AlamofireAdapter: HttpPostClient {
+
+class AlamofireAdapter: HttpPostClient {
+    
+    let baseURL = "https://openlibrary.org"
     private let session: Session
     
-    public init(session: Session = .default) {
+    init(session: Session = .default) {
         self.session = session
     }
     
-    public func fetchBooksByTheme(to url: URL, completion: @escaping (Result<Data?, HttpError>) -> Void) {
+    func fetchBooksBy(path: Endpoint, keyValue: String, completion: @escaping (Result<Data?, HttpError>) -> Void) {
+        guard let url = completeUrl(path: path, keyValue: keyValue) else {
+            completion(.failure(.badRequest))
+            return
+        }
+        
         session.request(url).responseData { dataResponse in
             guard let statusCode = dataResponse.response?.statusCode else {return completion(.failure(.noConnectivity))}
             switch dataResponse.result {
@@ -38,5 +46,19 @@ public class AlamofireAdapter: HttpPostClient {
                 }
             }
         }
+    }
+    
+    private func completeUrl(path: Endpoint, keyValue: String) -> URLRequest? {
+        let urlString: String
+        
+        switch path {
+        case .id: urlString = baseURL + path.rawValue + keyValue
+        case .theme: urlString = baseURL + path.rawValue + keyValue + ".json"
+        }
+        
+        guard let url = URL(string: urlString) else {
+            return nil
+        }
+        return URLRequest(url: url)
     }
 }
