@@ -1,50 +1,62 @@
 [
     {
     "id" : "new books",
-    "cover_name" : "new_books_category"
+    "cover_name" : "new_books_category",
+    "name" : "New books on Skeelo"
     },
     {
-    "id" : "management",
-    "cover_name" : "management_category"
+    "id" : "business",
+    "cover_name" : "management_category",
+    "name" : "Management, Business and Economy"
     },
     {
     "id" : "art",
-    "cover_name" : "art_category"
+    "cover_name" : "art_category",
+    "name" : "Art, Photography and Design"
     },
     {
     "id" : "self help",
-    "cover_name" : "self_help_category"
+    "cover_name" : "self_help_category",
+    "name" : "Self-help and Personal Growth"
     },
     {
     "id" : "biographies",
-    "cover_name" : "biographies_category"
+    "cover_name" : "biographies_category",
+    "name" : "Biographies and True Stories"
     },
     {
     "id" : "science",
-    "cover_name" : "science_category"
+    "cover_name" : "science_category",
+    "name" : "Science"
     },
     {
     "id" : "classics",
-    "cover_name" : "classics_category"
+    "cover_name" : "classics_category",
+    "name" : "Classics"
     },
     {
     "id" : "humor",
-    "cover_name" : "humor_category"
+    "cover_name" : "humor_category",
+    "name" : "Short Stories and Humor"
     },
     {
     "id" : "law",
-    "cover_name" : "law_category"
+    "cover_name" : "law_category",
+    "name" : "Law, Politics and Social Sciences"
     },
     {
     "id" : "education",
-    "cover_name" : "education_category"
+    "cover_name" : "education_category",
+    "name" : "Education and Study Books"
     },
     {
     "id" : "erotic",
-    "cover_name" : "erotic_category"
+    "cover_name" : "erotic_category",
+    "name" : "Erotic"
     },
     {
     "id" : "hobbies",
-    "cover_name" : "hobbies_category"
+    "cover_name" : "hobbies_category",
+    "name" : "Sports, Hobbies and Lifestyle"
     }
 ]

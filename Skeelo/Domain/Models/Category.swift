@@ -10,4 +10,5 @@ import Foundation
 struct Category: Codable {
     var id: String = ""
     var cover_name: String = ""
+    var name: String = ""
 }

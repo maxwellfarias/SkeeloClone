@@ -12,13 +12,23 @@ struct Works: Decodable {
 }
 
 struct BookByTheme: Decodable {
-    var key: String = ""
-    var title: String = ""
-    var cover_id: Int = 0
+    var key: String?
+    var title: String?
+    var cover_id: Int?
     var authors: [Author] = []
+    
+    func getAllAuthors() -> String {
+        var allAuthorsString = ""
+        for author in authors {
+            if let name = author.name {
+                allAuthorsString = name + ", "
+            }
+        }
+        return String(allAuthorsString.dropLast(2).trimmingCharacters(in: .whitespacesAndNewlines))
+    }
 }
 
 struct Author: Decodable {
-    var key: String = ""
-    var name: String = ""
+    var key: String?
+    var name: String?
 }

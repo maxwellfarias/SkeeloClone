@@ -11,7 +11,6 @@ import Alamofire
 
 class AlamofireAdapter: HttpPostClient {
     
-    let baseURL = "https://openlibrary.org"
     private let session: Session
     
     init(session: Session = .default) {
@@ -52,8 +51,8 @@ class AlamofireAdapter: HttpPostClient {
         let urlString: String
         
         switch path {
-        case .id: urlString = baseURL + path.rawValue + keyValue
-        case .theme: urlString = baseURL + path.rawValue + keyValue + ".json"
+        case .id: urlString = URLConstant.baseURL + path.rawValue + keyValue
+        case .theme: urlString = URLConstant.baseURL + path.rawValue + keyValue + ".json"
         }
         
         guard let url = URL(string: urlString) else {

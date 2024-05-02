@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C48C407D2BE2E618003CCF14 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C407C2BE2E618003CCF14 /* UseCaseFactory.swift */; };
+		C48C40802BE31851003CCF14 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C407F2BE31851003CCF14 /* PreviewData.swift */; };
+		C48C40822BE31B98003CCF14 /* SKLHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C40812BE31B98003CCF14 /* SKLHeaderView.swift */; };
+		C48C40842BE323B5003CCF14 /* SKLMarkerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C40832BE323B5003CCF14 /* SKLMarkerButton.swift */; };
+		C48C40862BE328B6003CCF14 /* SKLFilterPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C40852BE328B6003CCF14 /* SKLFilterPickerView.swift */; };
+		C48C40892BE32BAE003CCF14 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C48C40882BE32BAE003CCF14 /* Kingfisher */; };
+		C48C408B2BE32E0A003CCF14 /* IntExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C408A2BE32E0A003CCF14 /* IntExtension.swift */; };
+		C48C408D2BE32F20003CCF14 /* URLConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C408C2BE32F20003CCF14 /* URLConstant.swift */; };
 		C4B0323B2BE2C51000AFB479 /* categories.json in Resources */ = {isa = PBXBuildFile; fileRef = C4B0323A2BE2C51000AFB479 /* categories.json */; };
 		C4B0323D2BE2C93F00AFB479 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B0323C2BE2C93F00AFB479 /* Category.swift */; };
 		C4B032402BE2CA0300AFB479 /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B0323F2BE2CA0300AFB479 /* BundleExtension.swift */; };
@@ -49,6 +56,12 @@
 
 /* Begin PBXFileReference section */
 		C48C407C2BE2E618003CCF14 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
+		C48C407F2BE31851003CCF14 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
+		C48C40812BE31B98003CCF14 /* SKLHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKLHeaderView.swift; sourceTree = "<group>"; };
+		C48C40832BE323B5003CCF14 /* SKLMarkerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKLMarkerButton.swift; sourceTree = "<group>"; };
+		C48C40852BE328B6003CCF14 /* SKLFilterPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKLFilterPickerView.swift; sourceTree = "<group>"; };
+		C48C408A2BE32E0A003CCF14 /* IntExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtension.swift; sourceTree = "<group>"; };
+		C48C408C2BE32F20003CCF14 /* URLConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLConstant.swift; sourceTree = "<group>"; };
 		C4B0323A2BE2C51000AFB479 /* categories.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = categories.json; sourceTree = "<group>"; };
 		C4B0323C2BE2C93F00AFB479 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		C4B0323F2BE2CA0300AFB479 /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
@@ -78,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C48C40892BE32BAE003CCF14 /* Kingfisher in Frameworks */,
 				C4B8A5B62BE1E1E800DAB82C /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,10 +121,19 @@
 			path = Factories;
 			sourceTree = "<group>";
 		};
+		C48C407E2BE3183E003CCF14 /* PeviewDataMock */ = {
+			isa = PBXGroup;
+			children = (
+				C48C407F2BE31851003CCF14 /* PreviewData.swift */,
+			);
+			path = PeviewDataMock;
+			sourceTree = "<group>";
+		};
 		C4B0323E2BE2C9E100AFB479 /* Extension & Helper */ = {
 			isa = PBXGroup;
 			children = (
 				C4B0323F2BE2CA0300AFB479 /* BundleExtension.swift */,
+				C48C408A2BE32E0A003CCF14 /* IntExtension.swift */,
 			);
 			path = "Extension & Helper";
 			sourceTree = "<group>";
@@ -272,6 +295,7 @@
 		C4B8A5CF2BE21AAE00DAB82C /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				C48C407E2BE3183E003CCF14 /* PeviewDataMock */,
 				C48C407B2BE2E5DC003CCF14 /* Factories */,
 				C4B8A5D02BE21AB200DAB82C /* Constants */,
 			);
@@ -283,6 +307,7 @@
 			children = (
 				C4B8A5D12BE21AD000DAB82C /* SkeeloColor.swift */,
 				C4B0323A2BE2C51000AFB479 /* categories.json */,
+				C48C408C2BE32F20003CCF14 /* URLConstant.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -308,6 +333,9 @@
 			isa = PBXGroup;
 			children = (
 				C4E61CAD2BE2DBD70031CA57 /* ExploreDetailListView.swift */,
+				C48C40812BE31B98003CCF14 /* SKLHeaderView.swift */,
+				C48C40832BE323B5003CCF14 /* SKLMarkerButton.swift */,
+				C48C40852BE328B6003CCF14 /* SKLFilterPickerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -338,6 +366,7 @@
 			name = Skeelo;
 			packageProductDependencies = (
 				C4B8A5B52BE1E1E800DAB82C /* Alamofire */,
+				C48C40882BE32BAE003CCF14 /* Kingfisher */,
 			);
 			productName = Skeelo;
 			productReference = C4B8A5832BE1666200DAB82C /* Skeelo.app */;
@@ -413,6 +442,7 @@
 			mainGroup = C4B8A57A2BE1666100DAB82C;
 			packageReferences = (
 				C4B8A5B32BE1E0E900DAB82C /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C48C40872BE32BAE003CCF14 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = C4B8A5842BE1666200DAB82C /* Products */;
 			projectDirPath = "";
@@ -459,13 +489,19 @@
 			files = (
 				C4B8A5D42BE21CFD00DAB82C /* ExploreView.swift in Sources */,
 				C4B8A5BA2BE1E5DC00DAB82C /* HttpError.swift in Sources */,
+				C48C408B2BE32E0A003CCF14 /* IntExtension.swift in Sources */,
+				C48C40802BE31851003CCF14 /* PreviewData.swift in Sources */,
 				C4B032402BE2CA0300AFB479 /* BundleExtension.swift in Sources */,
 				C4B8A5BF2BE1E68300DAB82C /* ExtensionHelpers.swift in Sources */,
 				C4B8A5BC2BE1E61300DAB82C /* HttpPostClient.swift in Sources */,
+				C48C40842BE323B5003CCF14 /* SKLMarkerButton.swift in Sources */,
 				C4B8A5C32BE1E75B00DAB82C /* BookByThemeModel.swift in Sources */,
+				C48C408D2BE32F20003CCF14 /* URLConstant.swift in Sources */,
 				C4E61CA92BE2DB0A0031CA57 /* ExploreDetailListViewModel.swift in Sources */,
+				C48C40822BE31B98003CCF14 /* SKLHeaderView.swift in Sources */,
 				C4B8A5C82BE20A4600DAB82C /* FetchBooksUseCase.swift in Sources */,
 				C4B8A5872BE1666200DAB82C /* SkeeloApp.swift in Sources */,
+				C48C40862BE328B6003CCF14 /* SKLFilterPickerView.swift in Sources */,
 				C4B8A5D22BE21AD000DAB82C /* SkeeloColor.swift in Sources */,
 				C48C407D2BE2E618003CCF14 /* UseCaseFactory.swift in Sources */,
 				C4B8A5C52BE1F0AB00DAB82C /* BookModel.swift in Sources */,
@@ -804,6 +840,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C48C40872BE32BAE003CCF14 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
 		C4B8A5B32BE1E0E900DAB82C /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -815,6 +859,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C48C40882BE32BAE003CCF14 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C48C40872BE32BAE003CCF14 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		C4B8A5B52BE1E1E800DAB82C /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C4B8A5B32BE1E0E900DAB82C /* XCRemoteSwiftPackageReference "Alamofire" */;

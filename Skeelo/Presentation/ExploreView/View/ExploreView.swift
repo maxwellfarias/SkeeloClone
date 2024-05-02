@@ -15,7 +15,7 @@ struct ExploreView: View {
             
             Text("Explore")
                 .font(.title3)
-                .fontWeight(.bold)
+                .fontWeight(.semibold)
             
             ZStack(alignment: .trailing) {
                 
@@ -46,7 +46,7 @@ struct ExploreView: View {
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVGrid(columns: Array(repeating: .init(.flexible()), count:2), alignment: .center, spacing: 10) {
                     ForEach(categories, id: \.id) { category in
-                        NavigationLink(destination: Text("View \(category.id)")) {
+                        NavigationLink(destination: ExploreDetailListView(category: category)) {
                             Image(category.cover_name)
                               .resizable()
                               .scaledToFit()
