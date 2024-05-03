@@ -14,7 +14,7 @@ struct ExploreView: View {
         VStack(spacing: 0) {
             
             Text("Explore")
-                .font(.title3)
+                .font(.subheadline)
                 .fontWeight(.semibold)
             
             ZStack(alignment: .trailing) {
@@ -23,6 +23,8 @@ struct ExploreView: View {
                     Text("Another View")
                 } label: {
                     Text ("What would you like to read?")
+                        .font(.subheadline)
+                        .fontWeight(.light)
                         .foregroundStyle(SkeeloColor.lightGray100)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding()
@@ -36,12 +38,13 @@ struct ExploreView: View {
                 } label: {
                     Image(systemName: "magnifyingglass")
                         .foregroundStyle(.black)
-                        .font(.title2)
+                        .font(.title3)
                         .padding(.trailing, 15)
                 }
             }
             .frame(maxWidth: .infinity)
             .padding(.bottom, 10)
+            .padding(.top, 7)
             
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVGrid(columns: Array(repeating: .init(.flexible()), count:2), alignment: .center, spacing: 10) {
@@ -54,14 +57,14 @@ struct ExploreView: View {
                         }
                     }
                 }
-                .padding(.top, 20)
+                .padding(.top, 15)
             }
             
             Spacer()
         }
-        .background(.white)
         .padding(.horizontal, 15)
-        .padding(.top, 20)
+        .padding(.top, 12)
+        .background(.white)
         
     }
 }

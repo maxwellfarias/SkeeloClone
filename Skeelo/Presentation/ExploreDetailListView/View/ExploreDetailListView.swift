@@ -21,7 +21,7 @@ struct ExploreDetailListView: View {
                 .padding(.leading, 10)
             
             SKLFilterPickerView(tags: ["My Books", "Available for exchange", "Skeelo Store"])
-                .padding(.top, 10)
+                .padding([.top, .leading], 10)
             
             List(viewModel.books, id: \.key) { book in
                 HStack {
@@ -32,27 +32,31 @@ struct ExploreDetailListView: View {
                         }
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 110, height: 160)
+                        .frame(width: 105, height: 150)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
                     
                     VStack(alignment: .leading, spacing: 10) {
                         Text(book.title ?? "")
-                            .font(.headline)
+                            .foregroundStyle(.black)
+                            .font(.subheadline)
+                            .fontWeight(.semibold)
                             .padding(.top, 10)
                         
                         Text(book.getAllAuthors())
-                            .font(.callout)
+                            .font(.subheadline)
+                            .fontWeight(.light)
                             .foregroundStyle(.gray)
                         
                         HStack {
                             Image(systemName: "handbag")
-                                .font(.callout)
+                                .font(.footnote)
                                 .foregroundStyle(.red)
                                 .background(
                                     Circle()
-                                        .frame(width: 30, height: 30)
+                                        .frame(width: 25, height: 25)
                                         .foregroundStyle(SkeeloColor.lightRed)
                                 )
+                                .padding(.top, 5)
                             
                             Text("Purchase at the Skeelo Store")
                                 .font(.caption)
@@ -63,17 +67,12 @@ struct ExploreDetailListView: View {
                         
                         HStack {
                             Image(systemName: "book.pages")
-                                .font(.callout)
+                                .font(.footnote)
                                 .foregroundStyle(SkeeloColor.darkGreen)
-                                .background(
-                                    Circle()
-                                        .frame(width: 30, height: 30)
-                                        .foregroundStyle(SkeeloColor.lightGreen)
-                                )
                             
-                            Text("Purchase at the Skeelo Store")
+                            Text("Ebook")
                                 .font(.caption)
-                                .fontWeight(.medium)
+                                .fontWeight(.bold)
                                 .foregroundStyle(SkeeloColor.darkGreen)
                                 .padding(.leading, 8)
                         }
@@ -83,21 +82,20 @@ struct ExploreDetailListView: View {
                     .padding(.leading, 10)
                 }
                 .listRowSeparator(.hidden)
+                .listRowBackground(Color.white)
                 .padding(.leading, -15)
-                .background(.white)
+                .padding(.bottom, 5)
             }
             .listStyle(.plain)
             .scrollIndicators(.hidden)
-           
-            Spacer()
         }
-        .padding(.horizontal, 15)
-        .background(.white)
+        .padding(.leading, 15)
         .navigationBarBackButtonHidden()
-        .ignoresSafeArea(edges: .bottom)
+        .ignoresSafeArea(edges: [.bottom, .trailing])
         .onAppear {
             viewModel.fecthCategory(id: category.id)
         }
+        .background(.white)
     }
 }
 

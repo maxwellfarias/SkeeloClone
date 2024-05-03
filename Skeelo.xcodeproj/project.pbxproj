@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C436E7E92BE5913F00299883 /* DetailBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436E7E82BE5913F00299883 /* DetailBookView.swift */; };
 		C48C407D2BE2E618003CCF14 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C407C2BE2E618003CCF14 /* UseCaseFactory.swift */; };
 		C48C40802BE31851003CCF14 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C407F2BE31851003CCF14 /* PreviewData.swift */; };
 		C48C40822BE31B98003CCF14 /* SKLHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C40812BE31B98003CCF14 /* SKLHeaderView.swift */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C436E7E82BE5913F00299883 /* DetailBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookView.swift; sourceTree = "<group>"; };
 		C48C407C2BE2E618003CCF14 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		C48C407F2BE31851003CCF14 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		C48C40812BE31B98003CCF14 /* SKLHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKLHeaderView.swift; sourceTree = "<group>"; };
@@ -113,6 +115,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C436E7E62BE5912300299883 /* DetailBookView */ = {
+			isa = PBXGroup;
+			children = (
+				C436E7E72BE5912E00299883 /* View */,
+			);
+			path = DetailBookView;
+			sourceTree = "<group>";
+		};
+		C436E7E72BE5912E00299883 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C436E7E82BE5913F00299883 /* DetailBookView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C48C407B2BE2E5DC003CCF14 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
@@ -261,6 +279,7 @@
 		C4B8A5C92BE2162700DAB82C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C436E7E62BE5912300299883 /* DetailBookView */,
 				C4E61CAA2BE2DB5A0031CA57 /* ExploreDetailListView */,
 				C4B8A5CE2BE2188200DAB82C /* ExploreView */,
 				C4B8A5CA2BE2169800DAB82C /* TabBarView */,
@@ -502,6 +521,7 @@
 				C4B8A5C82BE20A4600DAB82C /* FetchBooksUseCase.swift in Sources */,
 				C4B8A5872BE1666200DAB82C /* SkeeloApp.swift in Sources */,
 				C48C40862BE328B6003CCF14 /* SKLFilterPickerView.swift in Sources */,
+				C436E7E92BE5913F00299883 /* DetailBookView.swift in Sources */,
 				C4B8A5D22BE21AD000DAB82C /* SkeeloColor.swift in Sources */,
 				C48C407D2BE2E618003CCF14 /* UseCaseFactory.swift in Sources */,
 				C4B8A5C52BE1F0AB00DAB82C /* BookModel.swift in Sources */,

@@ -13,6 +13,5 @@ struct SkeeloApp: App {
         WindowGroup {
             TabBarView()
         }
-        .accentColor(SkeeloColor.darkGreen)
     }
 }

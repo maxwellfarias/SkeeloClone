@@ -16,14 +16,14 @@ struct SKLHeaderView: View {
         HStack {
             Button(action: {dismiss.callAsFunction()}) {
                 Image(systemName: "chevron.backward")
-                    .font(.title)
+                    .font(.title3)
                     .foregroundStyle(.black)
             }
             
             Spacer()
             Text(title)
                 .foregroundStyle(.black)
-                .font(.title3)
+                .font(.subheadline)
                 .fontWeight(.semibold)
             Spacer()
         }

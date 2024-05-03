@@ -21,14 +21,14 @@ struct SKLFilterPickerView: View {
                     .padding(.horizontal, 10)
                     .background(RoundedRectangle(cornerRadius: 10, style: .continuous)
                         .stroke(SkeeloColor.lightGray, lineWidth: 1)
-                        .frame(height: 45))
+                        .frame(height: 40))
                 
                 ForEach(tags, id: \.self) { tag in
                     SKLMarkerButton(title: tag)
                 }
             })
         })
-        .frame(height: 50)
+        .frame(height: 41)
     }
 }
 
