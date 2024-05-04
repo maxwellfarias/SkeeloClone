@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C436E7E92BE5913F00299883 /* DetailBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436E7E82BE5913F00299883 /* DetailBookView.swift */; };
 		C436E7EB2BE5D40800299883 /* HorizontalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436E7EA2BE5D40800299883 /* HorizontalDetailView.swift */; };
+		C436E7ED2BE5E77F00299883 /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436E7EC2BE5E77F00299883 /* ReviewsView.swift */; };
+		C436E7EF2BE5EBCA00299883 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436E7EE2BE5EBCA00299883 /* Review.swift */; };
 		C48C407D2BE2E618003CCF14 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C407C2BE2E618003CCF14 /* UseCaseFactory.swift */; };
 		C48C40802BE31851003CCF14 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C407F2BE31851003CCF14 /* PreviewData.swift */; };
 		C48C40822BE31B98003CCF14 /* SKLHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C40812BE31B98003CCF14 /* SKLHeaderView.swift */; };
@@ -59,6 +61,8 @@
 /* Begin PBXFileReference section */
 		C436E7E82BE5913F00299883 /* DetailBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookView.swift; sourceTree = "<group>"; };
 		C436E7EA2BE5D40800299883 /* HorizontalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalDetailView.swift; sourceTree = "<group>"; };
+		C436E7EC2BE5E77F00299883 /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
+		C436E7EE2BE5EBCA00299883 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		C48C407C2BE2E618003CCF14 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		C48C407F2BE31851003CCF14 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		C48C40812BE31B98003CCF14 /* SKLHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKLHeaderView.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 			children = (
 				C436E7E82BE5913F00299883 /* DetailBookView.swift */,
 				C436E7EA2BE5D40800299883 /* HorizontalDetailView.swift */,
+				C436E7EC2BE5E77F00299883 /* ReviewsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,6 +272,7 @@
 				C4B8A5C22BE1E75B00DAB82C /* BookByThemeModel.swift */,
 				C4B8A5C42BE1F0AB00DAB82C /* BookModel.swift */,
 				C4B0323C2BE2C93F00AFB479 /* Category.swift */,
+				C436E7EE2BE5EBCA00299883 /* Review.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -518,6 +524,7 @@
 				C4B8A5BC2BE1E61300DAB82C /* HttpPostClient.swift in Sources */,
 				C48C40842BE323B5003CCF14 /* SKLMarkerButton.swift in Sources */,
 				C4B8A5C32BE1E75B00DAB82C /* BookByThemeModel.swift in Sources */,
+				C436E7ED2BE5E77F00299883 /* ReviewsView.swift in Sources */,
 				C48C408D2BE32F20003CCF14 /* URLConstant.swift in Sources */,
 				C4E61CA92BE2DB0A0031CA57 /* ExploreDetailListViewModel.swift in Sources */,
 				C48C40822BE31B98003CCF14 /* SKLHeaderView.swift in Sources */,
@@ -529,6 +536,7 @@
 				C4B8A5D22BE21AD000DAB82C /* SkeeloColor.swift in Sources */,
 				C48C407D2BE2E618003CCF14 /* UseCaseFactory.swift in Sources */,
 				C4B8A5C52BE1F0AB00DAB82C /* BookModel.swift in Sources */,
+				C436E7EF2BE5EBCA00299883 /* Review.swift in Sources */,
 				C4E61CAE2BE2DBD70031CA57 /* ExploreDetailListView.swift in Sources */,
 				C4B8A5CD2BE216D000DAB82C /* TabBarView.swift in Sources */,
 				C4B8A5B22BE1E0B600DAB82C /* AlamofireAdapter.swift in Sources */,
