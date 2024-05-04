@@ -23,10 +23,10 @@ struct ExploreDetailListView: View {
             SKLFilterPickerView(tags: ["My Books", "Available for exchange", "Skeelo Store"])
                 .padding([.top, .leading], 10)
             
-            List(1..<2) { book in
+            List(viewModel.books, id:\.key) { book in
                 NavigationLink {DetailBookView(book: PreviewData.detailBook, category: category)} label: {
                     HStack {
-                        KFImage(URL(string: "https://edit.org/images/cat/book-covers-big-2019101610.jpg"))
+                        KFImage(book.cover_id?.toURL())
                             .placeholder {
                                 ProgressView()
                                     .progressViewStyle(CircularProgressViewStyle())
@@ -37,13 +37,13 @@ struct ExploreDetailListView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                         
                         VStack(alignment: .leading, spacing: 10) {
-                            Text(PreviewData.bookTheme.title ?? "")
+                            Text(book.title ?? "")
                                 .foregroundStyle(.black)
                                 .font(.subheadline)
                                 .fontWeight(.semibold)
                                 .padding(.top, 10)
                             
-                            Text(PreviewData.bookTheme.getAllAuthors())
+                            Text(book.getAllAuthors())
                                 .font(.subheadline)
                                 .fontWeight(.light)
                                 .foregroundStyle(.gray)

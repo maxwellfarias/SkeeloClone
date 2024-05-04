@@ -11,7 +11,6 @@ struct ReviewView: View {
     var body: some View {
         VStack(spacing: 0) {
          
-            
             GeometryReader { geo in
                 ScrollView(.horizontal, showsIndicators: false, content: {
                     LazyHGrid(rows: [GridItem(.flexible(), spacing: 10)], alignment: .center, spacing: 10, content: {
@@ -53,6 +52,7 @@ struct ReviewView: View {
                                     .frame(height: 145)
                                     .shadow(color: SkeeloColor.lightGray100, radius: 2, x: 1, y: 1)
                             }
+                            .padding(.leading, 2)
                         }
                     })
                 })
