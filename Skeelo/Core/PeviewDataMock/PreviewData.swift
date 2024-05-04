@@ -17,7 +17,19 @@ class PreviewData {
         title: "1984",
         cover_id: 0,
     authors: [Author(key: "1984", name: "1984")])
-
+    
+    static var reviews: [Review] = [
+    Review(name: "Natalino Flora",
+           rating: 3,
+           description: "Not bad!"),
+    Review(name: "Danielle Farias",
+           rating: 4,
+           description: "Life lessons in each chapter! Many moments of reflection."),
+    Review(name: "Arthemis Riveira",
+           rating: 5,
+           description: "This is without a doubt the best book I have ever read in my life!")
+    ]
+    
     
     static var detailBook: BookModel = BookModel(
         title: "The Lord of the Rings",

@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Review {
+    var name: String
+    var rating: Int
+    var description: String
+}

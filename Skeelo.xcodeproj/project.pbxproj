@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C423DEF52BE6AE36002A4C9C /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C423DEF42BE6AE36002A4C9C /* ReviewView.swift */; };
 		C436E7E92BE5913F00299883 /* DetailBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436E7E82BE5913F00299883 /* DetailBookView.swift */; };
 		C436E7EB2BE5D40800299883 /* HorizontalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436E7EA2BE5D40800299883 /* HorizontalDetailView.swift */; };
 		C436E7ED2BE5E77F00299883 /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436E7EC2BE5E77F00299883 /* ReviewsView.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C423DEF42BE6AE36002A4C9C /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		C436E7E82BE5913F00299883 /* DetailBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookView.swift; sourceTree = "<group>"; };
 		C436E7EA2BE5D40800299883 /* HorizontalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalDetailView.swift; sourceTree = "<group>"; };
 		C436E7EC2BE5E77F00299883 /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				C436E7E82BE5913F00299883 /* DetailBookView.swift */,
 				C436E7EA2BE5D40800299883 /* HorizontalDetailView.swift */,
 				C436E7EC2BE5E77F00299883 /* ReviewsView.swift */,
+				C423DEF42BE6AE36002A4C9C /* ReviewView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				C48C40842BE323B5003CCF14 /* SKLMarkerButton.swift in Sources */,
 				C4B8A5C32BE1E75B00DAB82C /* BookByThemeModel.swift in Sources */,
 				C436E7ED2BE5E77F00299883 /* ReviewsView.swift in Sources */,
+				C423DEF52BE6AE36002A4C9C /* ReviewView.swift in Sources */,
 				C48C408D2BE32F20003CCF14 /* URLConstant.swift in Sources */,
 				C4E61CA92BE2DB0A0031CA57 /* ExploreDetailListViewModel.swift in Sources */,
 				C48C40822BE31B98003CCF14 /* SKLHeaderView.swift in Sources */,

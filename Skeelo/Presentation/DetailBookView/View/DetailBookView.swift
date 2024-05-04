@@ -140,10 +140,28 @@ struct DetailBookView: View {
                                 .frame(height: 40))
                             .padding(.top, 20)
                             .padding(.bottom, 25)
+                        
+                        HStack {
+                            Text("Reviews")
+                                .foregroundStyle(.black)
+                                .font(.headline)
+                                .fontWeight(.semibold)
+                            
+                            Spacer()
+                            
+                            Text("Read more")
+                                .foregroundStyle(SkeeloColor.darkGreen)
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                        }
+                        .padding(.bottom, 20)
                             
                     }
                     .padding(.horizontal, 20)
                     .padding(.top, 25)
+                    
+                    ReviewView()
+                        .padding(.leading, 20)
                 }
                 
             }
