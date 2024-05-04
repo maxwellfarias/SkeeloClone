@@ -23,12 +23,6 @@ struct DetailBookView: View {
                             .foregroundStyle(.black)
                     }
                     
-                    
-//                    Text(book.title)
-//                        .foregroundStyle(.black)
-//                        .font(.subheadline)
-//                        .fontWeight(.semibold)
-                    
                     Spacer()
                     
                     Button(action: {}) {
@@ -46,50 +40,56 @@ struct DetailBookView: View {
                             .foregroundStyle(SkeeloColor.darkGray)
                     }
                 }
+                .padding(.horizontal, 20)
                 
                 
-                KFImage(book.cover_i?.toURL())
-                    .placeholder {
-                        ProgressView()
-                            .progressViewStyle(CircularProgressViewStyle())
-                    }
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 180, height: 260)
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .padding(.top, 30)
+                VStack(spacing: 0) {
+                    KFImage(book.cover_i?.toURL())
+                        .placeholder {
+                            ProgressView()
+                                .progressViewStyle(CircularProgressViewStyle())
+                        }
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 180, height: 260)
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                        .padding(.top, 30)
+                    
+                    
+                    Text(book.title)
+                        .font(.body)
+                        .fontWeight(.semibold)
+                        .padding(.top, 20)
+                    
+                    Text(book.title)
+                        .font(.caption)
+                        .fontWeight(.light)
+                        .padding(.top, 10)
+                    
+                }
+                .padding(.horizontal, 20)
                 
-                Text(book.title)
-                    .font(.body)
-                    .fontWeight(.semibold)
-                    .padding(.top, 20)
                 
-                Text(book.title)
-                    .font(.caption)
-                    .fontWeight(.light)
-                    .padding(.top, 10)
-                
-                Text("Access the Skeelo Store on the Internet to buy this book.")
-                    .font(.caption)
-                    .foregroundStyle(SkeeloColor.blue)
-                    .fontWeight(.semibold)
-                    .padding(.top, 15)
-                
-                Text("The book you acquired are available to read here.")
-                    .font(.caption)
-                    .foregroundStyle(SkeeloColor.darkBlue)
-                    .fontWeight(.light)
-                    .padding(.top, 10)
-                
-                HStack {
+                VStack(spacing: 0) {
+                    
+                    Divider()
+                        .padding(.bottom, 10)
+                    
+                    HorizontalDetailView(ratingsCount: book.ratings_count ?? 0,
+                                         ratingsAverage: book.ratings_average ?? 0,
+                                         numberOfPagesMedian: book.number_of_pages_median ?? 0,
+                                         publisher: book.publisher?[0] ?? ""
+                    )
+                    
+                    Divider()
                     
                 }
                 .padding(.top, 25)
-
                 
             }
         }
-        .padding(.horizontal, 25)
+        .padding(.top, 6)
+        .ignoresSafeArea(edges: [.bottom, .trailing, .leading])
     }
 }
 

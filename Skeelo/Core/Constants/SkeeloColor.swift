@@ -19,4 +19,5 @@ class SkeeloColor {
     static let darkGray = Color("darkGray")
     static let blue = Color("blue")
     static let darkBlue = Color("darkBlue")
+    static let orange = Color("orange")
 }

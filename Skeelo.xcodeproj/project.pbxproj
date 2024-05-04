@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C436E7E92BE5913F00299883 /* DetailBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436E7E82BE5913F00299883 /* DetailBookView.swift */; };
+		C436E7EB2BE5D40800299883 /* HorizontalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C436E7EA2BE5D40800299883 /* HorizontalDetailView.swift */; };
 		C48C407D2BE2E618003CCF14 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C407C2BE2E618003CCF14 /* UseCaseFactory.swift */; };
 		C48C40802BE31851003CCF14 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C407F2BE31851003CCF14 /* PreviewData.swift */; };
 		C48C40822BE31B98003CCF14 /* SKLHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C40812BE31B98003CCF14 /* SKLHeaderView.swift */; };
@@ -57,6 +58,7 @@
 
 /* Begin PBXFileReference section */
 		C436E7E82BE5913F00299883 /* DetailBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookView.swift; sourceTree = "<group>"; };
+		C436E7EA2BE5D40800299883 /* HorizontalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalDetailView.swift; sourceTree = "<group>"; };
 		C48C407C2BE2E618003CCF14 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		C48C407F2BE31851003CCF14 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		C48C40812BE31B98003CCF14 /* SKLHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKLHeaderView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				C436E7E82BE5913F00299883 /* DetailBookView.swift */,
+				C436E7EA2BE5D40800299883 /* HorizontalDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -519,6 +522,7 @@
 				C4E61CA92BE2DB0A0031CA57 /* ExploreDetailListViewModel.swift in Sources */,
 				C48C40822BE31B98003CCF14 /* SKLHeaderView.swift in Sources */,
 				C4B8A5C82BE20A4600DAB82C /* FetchBooksUseCase.swift in Sources */,
+				C436E7EB2BE5D40800299883 /* HorizontalDetailView.swift in Sources */,
 				C4B8A5872BE1666200DAB82C /* SkeeloApp.swift in Sources */,
 				C48C40862BE328B6003CCF14 /* SKLFilterPickerView.swift in Sources */,
 				C436E7E92BE5913F00299883 /* DetailBookView.swift in Sources */,
