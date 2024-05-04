@@ -12,6 +12,13 @@ class PreviewData {
                                              cover_name: "classics_category",
                                              name: "Classics")
     
+    static var bookTheme: BookByTheme = BookByTheme(
+        key: "1984",
+        title: "1984",
+        cover_id: 0,
+    authors: [Author(key: "1984", name: "1984")])
+
+    
     static var detailBook: BookModel = BookModel(
         title: "The Lord of the Rings",
         cover_i: 8474036,

@@ -26,10 +26,12 @@ struct HorizontalDetailView: View {
                     HStack {
                         Image(systemName: "star.fill")
                             .font(.footnote)
+                            .fontWeight(.semibold)
                             .foregroundStyle(SkeeloColor.orange)
                         
                         Text(String(round(ratingsAverage)))
                             .font(.footnote)
+                            .foregroundStyle(.black)
                         
                         Image(systemName: "chevron.right")
                             .font(.caption2)

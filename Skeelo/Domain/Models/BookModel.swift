@@ -26,4 +26,15 @@ struct BookModel: Decodable {
     var person: [String]?
     var first_sentence: [String]?
     var language: [String]?
+    
+    func getString(datas: [String]?) -> String {
+        var allDatasTogether = ""
+        
+        if let datas = datas {
+            for data in datas {
+                allDatasTogether = allDatasTogether + data + ", "
+            }
+        }
+        return String(allDatasTogether.dropLast(2).trimmingCharacters(in: .whitespacesAndNewlines))
+    }
 }

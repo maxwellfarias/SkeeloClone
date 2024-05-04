@@ -23,10 +23,10 @@ struct ExploreDetailListView: View {
             SKLFilterPickerView(tags: ["My Books", "Available for exchange", "Skeelo Store"])
                 .padding([.top, .leading], 10)
             
-            List(viewModel.books, id: \.key) { book in
-                NavigationLink {DetailBookView(book: PreviewData.detailBook)} label: {
+            List(1..<2) { book in
+                NavigationLink {DetailBookView(book: PreviewData.detailBook, category: category)} label: {
                     HStack {
-                        KFImage(book.cover_id?.toURL())
+                        KFImage(URL(string: "https://edit.org/images/cat/book-covers-big-2019101610.jpg"))
                             .placeholder {
                                 ProgressView()
                                     .progressViewStyle(CircularProgressViewStyle())
@@ -37,13 +37,13 @@ struct ExploreDetailListView: View {
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                         
                         VStack(alignment: .leading, spacing: 10) {
-                            Text(book.title ?? "")
+                            Text(PreviewData.bookTheme.title ?? "")
                                 .foregroundStyle(.black)
                                 .font(.subheadline)
                                 .fontWeight(.semibold)
                                 .padding(.top, 10)
                             
-                            Text(book.getAllAuthors())
+                            Text(PreviewData.bookTheme.getAllAuthors())
                                 .font(.subheadline)
                                 .fontWeight(.light)
                                 .foregroundStyle(.gray)
@@ -82,11 +82,11 @@ struct ExploreDetailListView: View {
                         }
                         .padding(.leading, 10)
                     }
-                    .listRowSeparator(.hidden)
-                    .listRowBackground(Color.white)
                     .padding(.leading, -15)
                     .padding(.bottom, 5)
                 }
+                .listRowSeparator(.hidden)
+                .listRowBackground(Color.white)
 
             }
             .listStyle(.plain)
