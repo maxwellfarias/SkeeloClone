@@ -10,9 +10,13 @@ import Kingfisher
 
 struct ExploreDetailListView: View {
     
-    @StateObject var viewModel: ExploreDetailListViewModel = ExploreDetailListViewModel()
-    
+    @StateObject var viewModel: ExploreDetailListViewModel
     var category: Category
+    
+    init(viewModel: ExploreDetailListViewModel = ExploreDetailListViewModel(), category: Category) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+        self.category = category
+    }
     
     var body: some View {
         
@@ -95,12 +99,10 @@ struct ExploreDetailListView: View {
                     }
                     .listRowSeparator(.hidden)
                     .listRowBackground(Color.white)
-                    
                 }
                 .listStyle(.plain)
                 .scrollIndicators(.hidden)
             }
-            
         }
         .padding(.leading, 15)
         .navigationBarBackButtonHidden()

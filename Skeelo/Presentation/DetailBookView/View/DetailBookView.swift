@@ -12,8 +12,13 @@ struct DetailBookView: View {
     
     @Environment(\.dismiss) var dismiss
     @State var favoriteIsSelected: Bool = false
+    @StateObject var viewModel: DetailBookViewModel
     
-    @StateObject var viewModel: DetailBookViewModel = DetailBookViewModel(fetchBookUseCase: UseCaseFactory.createFetchBooksUseCase())
+    init(viewModel: DetailBookViewModel = DetailBookViewModel(fetchBookUseCase: UseCaseFactory.createFetchBooksUseCase()), category: Category, id: String) {
+        _viewModel = StateObject(wrappedValue: viewModel)
+        self.category = category
+        self.id = id
+    }
     let category: Category
     let id: String
     

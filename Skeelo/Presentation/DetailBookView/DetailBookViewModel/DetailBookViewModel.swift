@@ -11,7 +11,7 @@ class DetailBookViewModel: ObservableObject {
     @Published var books: [BookModel]
     var fetchBookUseCase: FetchBooksUseCaseProtocol
     
-    init(books: [BookModel] = [], fetchBookUseCase: FetchBooksUseCaseProtocol) {
+    init(books: [BookModel] = [], fetchBookUseCase: FetchBooksUseCaseProtocol = UseCaseFactory.createFetchBooksUseCase()) {
         self.books = books
         self.fetchBookUseCase = fetchBookUseCase
     }
