@@ -17,7 +17,7 @@ class DetailBookViewModel: ObservableObject {
     }
     
     func fetchBook(id: String) {
-        fetchBookUseCase.fetchBooksById(path: .id, keyValue: formatIdForSearch(id: id)) { result in
+        fetchBookUseCase.fetchBooksById(keyValue: formatIdForSearch(id: id)) { result in
             switch result {
             case .success(let books):
                 self.books = books.docs

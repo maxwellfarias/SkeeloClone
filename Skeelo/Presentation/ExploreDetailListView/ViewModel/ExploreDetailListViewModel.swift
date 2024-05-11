@@ -16,7 +16,7 @@ class ExploreDetailListViewModel: ObservableObject {
     }
     
     func fecthCategory(id: String) {
-        useCase.fetchBooksByTheme(path: .theme, keyValue: id) { result in
+        useCase.fetchBooksByTheme(keyValue: id) { result in
             switch result {
             case .success(let works): self.books = works.works
             case .failure(let error): break

@@ -17,8 +17,9 @@ class AlamofireAdapter: HttpPostClient {
         self.session = session
     }
     
-    func fetchBooks(path: Endpoint, keyValue: String, completion: @escaping (Result<Data?, HttpError>) -> Void) {
-        guard let url = completeUrl(path: path, keyValue: keyValue) else {
+    func fetchBooksById(keyValue: String, completion: @escaping (Result<Data?, HttpError>) -> Void) {
+        let urlString = URLConstant.baseURLForID + keyValue
+        guard let url =  URL(string: urlString) else {
             completion(.failure(.badRequest))
             return
         }
@@ -47,17 +48,34 @@ class AlamofireAdapter: HttpPostClient {
         }
     }
     
-    private func completeUrl(path: Endpoint, keyValue: String) -> URLRequest? {
-        let urlString: String
-        
-        switch path {
-        case .id: urlString = URLConstant.baseURL + path.rawValue + keyValue
-        case .theme: urlString = URLConstant.baseURL + path.rawValue + keyValue + ".json"
+    func fetchBooksByTheme(keyValue: String, completion: @escaping (Result<Data?, HttpError>) -> Void) {
+        let urlString = URLConstant.baseURLForTheme + keyValue + ".json"
+        guard let url =  URL(string: urlString) else {
+            completion(.failure(.badRequest))
+            return
         }
         
-        guard let url = URL(string: urlString) else {
-            return nil
+        session.request(url).responseData { dataResponse in
+            guard let statusCode = dataResponse.response?.statusCode else {return completion(.failure(.noConnectivity))}
+            switch dataResponse.result {
+            case .failure: completion(.failure(.noConnectivity))
+            case .success(let data):
+                switch statusCode {
+                case 204:
+                    completion(.success(nil))
+                case 200...299:
+                    completion(.success(data))
+                case 401:
+                    completion(.failure(.unauthorized))
+                case 403:
+                    completion(.failure(.forbidden))
+                case 400...499:
+                    completion(.failure(.badRequest))
+                case 500...599:
+                    completion(.failure(.serverError))
+                default: completion(.failure(.noConnectivity))
+                }
+            }
         }
-        return URLRequest(url: url)
     }
 }

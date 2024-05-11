@@ -8,6 +8,7 @@
 import Foundation
 
 class URLConstant {
-    static let baseURL: String = "https://openlibrary.org"
+    static let baseURLForID: String = "https://openlibrary.org/search.json?q="
+    static let baseURLForTheme: String = "https://openlibrary.org/subjects/"
     static let coverURL: String = "https://covers.openlibrary.org"
 }

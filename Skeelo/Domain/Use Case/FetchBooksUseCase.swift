@@ -8,8 +8,8 @@
 import Foundation
 
 protocol FetchBooksUseCaseProtocol {
-    func fetchBooksById(path: Endpoint, keyValue: String, completion: @escaping (Result<Docs, HttpError>) -> Void)
-    func fetchBooksByTheme(path: Endpoint, keyValue: String, completion: @escaping (Result<Works, HttpError>) -> Void)
+    func fetchBooksById(keyValue: String, completion: @escaping (Result<Docs, HttpError>) -> Void)
+    func fetchBooksByTheme(keyValue: String, completion: @escaping (Result<Works, HttpError>) -> Void)
 }
 
 class FetchBooksUseCase: FetchBooksUseCaseProtocol {
@@ -19,8 +19,8 @@ class FetchBooksUseCase: FetchBooksUseCaseProtocol {
         self.httpClient = httpClient
     }
     
-    func fetchBooksById(path: Endpoint, keyValue: String, completion: @escaping (Result<Docs, HttpError>) -> Void) {
-        httpClient.fetchBooks(path: path, keyValue: keyValue) { result in
+    func fetchBooksById(keyValue: String, completion: @escaping (Result<Docs, HttpError>) -> Void) {
+        httpClient.fetchBooksById(keyValue: keyValue) { result in
             switch result {
             case .success(let data):
                 guard let books: Docs = data?.toModel() else {
@@ -33,8 +33,8 @@ class FetchBooksUseCase: FetchBooksUseCaseProtocol {
         }
     }
     
-    func fetchBooksByTheme(path: Endpoint, keyValue: String, completion: @escaping (Result<Works, HttpError>) -> Void) {
-        httpClient.fetchBooks(path: path, keyValue: keyValue) { result in
+    func fetchBooksByTheme(keyValue: String, completion: @escaping (Result<Works, HttpError>) -> Void) {
+        httpClient.fetchBooksByTheme(keyValue: keyValue) { result in
             switch result {
             case .success(let data):
                 guard let books: Works = data?.toModel() else {
