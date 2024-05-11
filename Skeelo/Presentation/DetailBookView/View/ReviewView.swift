@@ -49,6 +49,7 @@ struct ReviewView: View {
                             .frame(width: geo.size.width * 0.9, alignment: .leading)
                             .background{
                                 RoundedRectangle(cornerRadius: 10)
+                                    .fill(.white)
                                     .frame(height: 145)
                                     .shadow(color: SkeeloColor.lightGray100, radius: 2, x: 1, y: 1)
                             }

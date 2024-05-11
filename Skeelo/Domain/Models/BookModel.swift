@@ -12,9 +12,9 @@ struct Docs: Decodable {
 }
 
 struct BookModel: Decodable {
-    var title: String = ""
+    var title: String?
     var cover_i: Int?
-    var author_name: [String]
+    var author_name: [String]?
     var number_of_pages_median: Int?
     var publisher: [String]?
     var ratings_average: Float?
