@@ -51,7 +51,7 @@ struct DetailBookView: View {
             }
             .padding(.horizontal, 20)
             
-            if viewModel.books.count < 1 {
+            if viewModel.isLoading {
                 
                 ProgressView()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -66,7 +66,7 @@ struct DetailBookView: View {
                         VStack(spacing: 0) {
                             
                             VStack(spacing: 0) {
-                                KFImage(viewModel.books[0].cover_i?.toURL())
+                                KFImage(viewModel.book?.cover_i?.toURL())
                                     .placeholder {
                                         ProgressView()
                                             .progressViewStyle(CircularProgressViewStyle())
@@ -77,13 +77,13 @@ struct DetailBookView: View {
                                     .clipShape(RoundedRectangle(cornerRadius: 10))
                                     .padding(.top, 30)
                                 
-                                Text(viewModel.books[0].title ?? "")
+                                Text(viewModel.book?.title ?? "")
                                     .font(.body)
                                     .foregroundStyle(.black)
                                     .fontWeight(.semibold)
                                     .padding(.top, 20)
                                 
-                                Text(viewModel.books[0].title ?? "")
+                                Text(viewModel.book?.title ?? "")
                                     .font(.caption)
                                     .fontWeight(.light)
                                     .foregroundStyle(.gray)
@@ -95,17 +95,17 @@ struct DetailBookView: View {
                                 Divider()
                                     .padding(.bottom, 10)
                                 
-                                HorizontalDetailView(ratingsCount: viewModel.books[0].ratings_count ?? 0,
-                                                     ratingsAverage: viewModel.books[0].ratings_average ?? 0,
-                                                     numberOfPagesMedian: viewModel.books[0].number_of_pages_median ?? 0,
-                                                     publisher: viewModel.books[0].publisher?[0] ?? ""
+                                HorizontalDetailView(ratingsCount: viewModel.book?.ratings_count ?? 0,
+                                                     ratingsAverage: viewModel.book?.ratings_average ?? 0,
+                                                     numberOfPagesMedian: viewModel.book?.number_of_pages_median ?? 0,
+                                                     publisher: viewModel.book?.publisher?[0] ?? ""
                                 )
                                 Divider()
                             }
                             .padding(.top, 25)
                             
                             VStack(alignment: .leading, spacing: 0) {
-                                Text(viewModel.books[0].getString(datas: viewModel.books[0].first_sentence))
+                                Text(viewModel.book?.getString(datas: viewModel.book?.first_sentence) ?? "")
                                     .foregroundStyle(.gray)
                                     .fontWeight(.light)
                                     .font(.subheadline)
@@ -116,15 +116,15 @@ struct DetailBookView: View {
                                     .font(.subheadline)
                                     .padding(.top, 20)
                                 
-                                if let language = viewModel.books[0].language {
-                                    Text("Language: \(viewModel.books[0].getString(datas: language))")
+                                if let languages = viewModel.book?.language {
+                                    Text("Language: \(viewModel.book?.getString(datas: languages) ?? "")")
                                         .foregroundStyle(.gray)
                                         .fontWeight(.light)
                                         .font(.subheadline)
                                         .padding(.top, 20)
                                 }
                                 
-                                if let year = viewModel.books[0].first_publish_year {
+                                if let year = viewModel.book?.first_publish_year {
                                     Text("Year: \(String(year))")
                                         .foregroundStyle(.gray)
                                         .fontWeight(.light)
@@ -132,7 +132,7 @@ struct DetailBookView: View {
                                         .padding(.top, 20)
                                 }
                                 
-                                if let ISBN = viewModel.books[0].isbn {
+                                if let ISBN = viewModel.book?.isbn {
                                     Text("ISBN: \(ISBN[0])")
                                         .foregroundStyle(.gray)
                                         .fontWeight(.light)
@@ -140,7 +140,7 @@ struct DetailBookView: View {
                                         .padding(.top, 20)
                                 }
                                 
-                                if let edition = viewModel.books[0].edition_count {
+                                if let edition = viewModel.book?.edition_count {
                                     Text("Edition: \(String(edition))")
                                         .foregroundStyle(.gray)
                                         .fontWeight(.light)

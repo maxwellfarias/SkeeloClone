@@ -8,19 +8,22 @@
 import Foundation
 
 class DetailBookViewModel: ObservableObject {
-    @Published var books: [BookModel]
+    @Published var book: BookModel?
+    @Published var isLoading: Bool = false
     var fetchBookUseCase: FetchBooksUseCaseProtocol
     
-    init(books: [BookModel] = [], fetchBookUseCase: FetchBooksUseCaseProtocol = UseCaseFactory.createFetchBooksUseCase()) {
-        self.books = books
+    init(book: BookModel? = nil, fetchBookUseCase: FetchBooksUseCaseProtocol = UseCaseFactory.createFetchBooksUseCase()) {
+        self.book = book
         self.fetchBookUseCase = fetchBookUseCase
     }
     
     func fetchBook(id: String) {
+        isLoading = true
         fetchBookUseCase.fetchBooksById(keyValue: formatIdForSearch(id: id)) { result in
             switch result {
             case .success(let books):
-                self.books = books.docs
+                self.book = books.docs[0]
+                self.isLoading = false
             case .failure(let error): break
             }
         }

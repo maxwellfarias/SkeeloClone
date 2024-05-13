@@ -16,7 +16,8 @@ struct ExploreView: View {
             Text("Explore")
                 .font(.subheadline)
                 .fontWeight(.semibold)
-//                .foregroundStyle(.black)
+                .foregroundStyle(.black)
+
             
             ZStack(alignment: .trailing) {
                 

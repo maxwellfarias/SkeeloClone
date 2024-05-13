@@ -28,7 +28,7 @@ struct ExploreDetailListView: View {
             SKLFilterPickerView(tags: ["My Books", "Available for exchange", "Skeelo Store"])
                 .padding([.top, .leading], 10)
             
-            if viewModel.books.isEmpty {
+            if viewModel.isLoading {
                 ProgressView()
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .controlSize(.large)
@@ -115,5 +115,7 @@ struct ExploreDetailListView: View {
 }
 
 #Preview {
-    ExploreDetailListView(category: PreviewData.category)
+    NavigationStack {
+        ExploreDetailListView(category: PreviewData.category)
+    }
 }
