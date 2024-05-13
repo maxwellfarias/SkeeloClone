@@ -13,6 +13,7 @@ struct DetailBookView: View {
     @Environment(\.dismiss) var dismiss
     @State var favoriteIsSelected: Bool = false
     @StateObject var viewModel: DetailBookViewModel
+    @State private var toast: Toast? = nil
     
     init(viewModel: DetailBookViewModel = DetailBookViewModel(fetchBookUseCase: UseCaseFactory.createFetchBooksUseCase()), category: Category, id: String) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -42,7 +43,14 @@ struct DetailBookView: View {
                 }
                 .padding(.trailing, 30)
                 
-                Button(action: {favoriteIsSelected.toggle()}) {
+                Button(action: {
+                    favoriteIsSelected.toggle()
+                    if favoriteIsSelected {
+                        toast = Toast(type: .success, title: "Congratulations!", message: "You have a new book on your favorites list! 📚")
+                    } else {
+                        toast = Toast(type: .info, title: "Information", message: "the book \(viewModel.book?.title ?? "") has been removed from your favorites list")
+                    }
+                }) {
                     Image(systemName: "suit.heart.fill")
                         .font(.title3)
                         .frame(width: 23, height: 23)
@@ -58,7 +66,7 @@ struct DetailBookView: View {
                     .controlSize(.large)
                     .progressViewStyle(CircularProgressViewStyle(tint: .gray))
                     .background(.white)
-                    
+                
             } else {
                 
                 ZStack(alignment: .bottom) {
@@ -239,6 +247,7 @@ struct DetailBookView: View {
         .onAppear{
             viewModel.fetchBook(id: id)
         }
+        .toastView(toast: $toast)
     }
 }
 
