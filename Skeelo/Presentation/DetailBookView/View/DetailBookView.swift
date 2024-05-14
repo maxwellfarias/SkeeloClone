@@ -47,7 +47,7 @@ struct DetailBookView: View {
                     if favoriteIsSelected {
                         viewModel.errorToast = Toast(type: .success, title: "Congratulations!", message: "You have a new book on your favorites list! 📚")
                     } else {
-                        viewModel.errorToast = Toast(type: .info, title: "Information", message: "the book \(viewModel.book?.title ?? "") has been removed from your favorites list")
+                        viewModel.errorToast = Toast(type: .info, title: "Information", message: "The book \(viewModel.book?.title ?? "") has been removed from your favorites list")
                     }
                 }) {
                     Image(systemName: "suit.heart.fill")
@@ -60,11 +60,7 @@ struct DetailBookView: View {
             
             if viewModel.isLoading {
                 
-                ProgressView()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .controlSize(.large)
-                    .progressViewStyle(CircularProgressViewStyle(tint: .gray))
-                    .background(.white)
+                DetailBookLoadingView()
                 
             } else {
                 
@@ -164,8 +160,7 @@ struct DetailBookView: View {
                                         .fill(SkeeloColor.lightGreen)
                                         .stroke(SkeeloColor.lightGreen, lineWidth: 1)
                                         .frame(height: 40))
-                                    .padding(.top, 20)
-                                    .padding(.bottom, 25)
+                                    .padding(.vertical, 30)
                                 
                                 HStack {
                                     Text("Reviews")

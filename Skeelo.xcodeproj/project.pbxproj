@@ -16,8 +16,9 @@
 		C43959A42BF28E7800667301 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43959A32BF28E7800667301 /* ToastView.swift */; };
 		C43959A62BF2A1B200667301 /* ToastModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43959A52BF2A1B200667301 /* ToastModifier.swift */; };
 		C43959A82BF2A23700667301 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43959A72BF2A23700667301 /* ViewExtension.swift */; };
-		C43959AA2BF2E6FF00667301 /* LoadingEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43959A92BF2E6FF00667301 /* LoadingEffectView.swift */; };
 		C43959AC2BF2E9EB00667301 /* ExploreDetailListViewLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43959AB2BF2E9EB00667301 /* ExploreDetailListViewLoading.swift */; };
+		C46A4F3B2BF3080500736DFC /* LoadingEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46A4F3A2BF3080500736DFC /* LoadingEffectView.swift */; };
+		C46A4F3D2BF3086200736DFC /* DetailBookLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46A4F3C2BF3086200736DFC /* DetailBookLoadingView.swift */; };
 		C48C407D2BE2E618003CCF14 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C407C2BE2E618003CCF14 /* UseCaseFactory.swift */; };
 		C48C40802BE31851003CCF14 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C407F2BE31851003CCF14 /* PreviewData.swift */; };
 		C48C40822BE31B98003CCF14 /* SKLHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48C40812BE31B98003CCF14 /* SKLHeaderView.swift */; };
@@ -76,8 +77,9 @@
 		C43959A32BF28E7800667301 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		C43959A52BF2A1B200667301 /* ToastModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastModifier.swift; sourceTree = "<group>"; };
 		C43959A72BF2A23700667301 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
-		C43959A92BF2E6FF00667301 /* LoadingEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingEffectView.swift; sourceTree = "<group>"; };
 		C43959AB2BF2E9EB00667301 /* ExploreDetailListViewLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreDetailListViewLoading.swift; sourceTree = "<group>"; };
+		C46A4F3A2BF3080500736DFC /* LoadingEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingEffectView.swift; sourceTree = "<group>"; };
+		C46A4F3C2BF3086200736DFC /* DetailBookLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookLoadingView.swift; sourceTree = "<group>"; };
 		C48C407C2BE2E618003CCF14 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		C48C407F2BE31851003CCF14 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		C48C40812BE31B98003CCF14 /* SKLHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SKLHeaderView.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				C436E7EA2BE5D40800299883 /* HorizontalDetailView.swift */,
 				C436E7EC2BE5E77F00299883 /* ReviewsView.swift */,
 				C423DEF42BE6AE36002A4C9C /* ReviewView.swift */,
+				C46A4F3C2BF3086200736DFC /* DetailBookLoadingView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				C43959A32BF28E7800667301 /* ToastView.swift */,
+				C46A4F3A2BF3080500736DFC /* LoadingEffectView.swift */,
 			);
 			path = "Reusable Views";
 			sourceTree = "<group>";
@@ -322,8 +326,6 @@
 				C4E61CAA2BE2DB5A0031CA57 /* ExploreDetailListView */,
 				C4B8A5CE2BE2188200DAB82C /* ExploreView */,
 				C4B8A5CA2BE2169800DAB82C /* TabBarView */,
-				C43959A92BF2E6FF00667301 /* LoadingEffectView.swift */,
-				C43959AB2BF2E9EB00667301 /* ExploreDetailListViewLoading.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -401,6 +403,7 @@
 			isa = PBXGroup;
 			children = (
 				C4E61CAD2BE2DBD70031CA57 /* ExploreDetailListView.swift */,
+				C43959AB2BF2E9EB00667301 /* ExploreDetailListViewLoading.swift */,
 				C48C40812BE31B98003CCF14 /* SKLHeaderView.swift */,
 				C48C40832BE323B5003CCF14 /* SKLMarkerButton.swift */,
 				C48C40852BE328B6003CCF14 /* SKLFilterPickerView.swift */,
@@ -567,13 +570,13 @@
 				C43959A62BF2A1B200667301 /* ToastModifier.swift in Sources */,
 				C4B8A5BC2BE1E61300DAB82C /* HttpPostClient.swift in Sources */,
 				C48C40842BE323B5003CCF14 /* SKLMarkerButton.swift in Sources */,
-				C43959AA2BF2E6FF00667301 /* LoadingEffectView.swift in Sources */,
 				C4B8A5C32BE1E75B00DAB82C /* BookByThemeModel.swift in Sources */,
 				C436E7ED2BE5E77F00299883 /* ReviewsView.swift in Sources */,
 				C423DEF52BE6AE36002A4C9C /* ReviewView.swift in Sources */,
 				C48C408D2BE32F20003CCF14 /* URLConstant.swift in Sources */,
 				C4E61CA92BE2DB0A0031CA57 /* ExploreDetailListViewModel.swift in Sources */,
 				C48C40822BE31B98003CCF14 /* SKLHeaderView.swift in Sources */,
+				C46A4F3D2BF3086200736DFC /* DetailBookLoadingView.swift in Sources */,
 				C4B8A5C82BE20A4600DAB82C /* FetchBooksUseCase.swift in Sources */,
 				C436E7EB2BE5D40800299883 /* HorizontalDetailView.swift in Sources */,
 				C4B8A5872BE1666200DAB82C /* SkeeloApp.swift in Sources */,
@@ -588,6 +591,7 @@
 				C43959AC2BF2E9EB00667301 /* ExploreDetailListViewLoading.swift in Sources */,
 				C4B8A5CD2BE216D000DAB82C /* TabBarView.swift in Sources */,
 				C4B8A5B22BE1E0B600DAB82C /* AlamofireAdapter.swift in Sources */,
+				C46A4F3B2BF3080500736DFC /* LoadingEffectView.swift in Sources */,
 				C4B0323D2BE2C93F00AFB479 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

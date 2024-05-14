@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LoadingEffectView: View {
+struct SKLLoadingEffectView: View {
     
     private var gradientColors = [
         Color(uiColor: UIColor(SkeeloColor.systemGray5)),
@@ -32,5 +32,5 @@ struct LoadingEffectView: View {
 }
 
 #Preview {
-    LoadingEffectView()
+    SKLLoadingEffectView()
 }

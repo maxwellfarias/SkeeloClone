@@ -16,40 +16,40 @@ struct ExploreDetailListViewLoading: View {
             List(1..<6) { _ in
                 
                 HStack(alignment: .top) {
-                                LoadingEffectView()
+                                SKLLoadingEffectView()
                                 .cornerRadius(10)
                                 .frame(width: 105, height: 150)
                                 .padding(.top, 15)
                             
                             VStack(alignment: .leading, spacing: 0) {
-                                LoadingEffectView()
+                                SKLLoadingEffectView()
                                     .cornerRadius(10)
                                     .frame(height: 25)
                                     .frame(maxWidth: .infinity)
                                 
-                                LoadingEffectView()
+                                SKLLoadingEffectView()
                                     .cornerRadius(10)
                                     .frame(height: 25)
                                     .frame(maxWidth: .infinity)
                                     .padding(.top, 8)
                                 
                                 HStack(alignment: .top) {
-                                    LoadingEffectView()
+                                    SKLLoadingEffectView()
                                         .cornerRadius(13)
                                         .frame(width: 26, height: 26)
                                     
-                                    LoadingEffectView()
+                                    SKLLoadingEffectView()
                                         .cornerRadius(10)
                                         .frame(width: 110, height: 25)
                                 }
                                 .padding(.top, 10)
                                 
                                 HStack(alignment: .top) {
-                                    LoadingEffectView()
+                                    SKLLoadingEffectView()
                                         .cornerRadius(13)
                                         .frame(width: 26, height: 26)
                                     
-                                    LoadingEffectView()
+                                    SKLLoadingEffectView()
                                         .cornerRadius(10)
                                         .frame(width: 110, height: 25)
                                 }
