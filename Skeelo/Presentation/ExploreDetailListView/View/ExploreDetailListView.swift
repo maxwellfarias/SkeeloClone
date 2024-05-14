@@ -29,10 +29,9 @@ struct ExploreDetailListView: View {
                 .padding([.top, .leading], 10)
             
             if viewModel.isLoading {
-                ProgressView()
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                    .controlSize(.large)
-                    .progressViewStyle(CircularProgressViewStyle(tint: .gray))
+                
+                ExploreDetailListViewLoading()
+                
             } else {
                 
                 List(viewModel.books, id:\.key) { book in
