@@ -13,7 +13,6 @@ struct DetailBookView: View {
     @Environment(\.dismiss) var dismiss
     @State var favoriteIsSelected: Bool = false
     @StateObject var viewModel: DetailBookViewModel
-    @State private var toast: Toast? = nil
     
     init(viewModel: DetailBookViewModel = DetailBookViewModel(fetchBookUseCase: UseCaseFactory.createFetchBooksUseCase()), category: Category, id: String) {
         _viewModel = StateObject(wrappedValue: viewModel)
@@ -46,9 +45,9 @@ struct DetailBookView: View {
                 Button(action: {
                     favoriteIsSelected.toggle()
                     if favoriteIsSelected {
-                        toast = Toast(type: .success, title: "Congratulations!", message: "You have a new book on your favorites list! 📚")
+                        viewModel.errorToast = Toast(type: .success, title: "Congratulations!", message: "You have a new book on your favorites list! 📚")
                     } else {
-                        toast = Toast(type: .info, title: "Information", message: "the book \(viewModel.book?.title ?? "") has been removed from your favorites list")
+                        viewModel.errorToast = Toast(type: .info, title: "Information", message: "the book \(viewModel.book?.title ?? "") has been removed from your favorites list")
                     }
                 }) {
                     Image(systemName: "suit.heart.fill")
@@ -247,7 +246,7 @@ struct DetailBookView: View {
         .onAppear{
             viewModel.fetchBook(id: id)
         }
-        .toastView(toast: $toast)
+        .toastView(toast: $viewModel.errorToast)
     }
 }
 

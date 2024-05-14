@@ -10,6 +10,7 @@ import Foundation
 class ExploreDetailListViewModel: ObservableObject {
     @Published var books: [BookByTheme] = []
     @Published var isLoading: Bool = false
+    @Published var errorToast: Toast? = nil
     var useCase: FetchBooksUseCaseProtocol
     
     init(useCase: FetchBooksUseCaseProtocol = UseCaseFactory.createFetchBooksUseCase()) {
@@ -23,7 +24,9 @@ class ExploreDetailListViewModel: ObservableObject {
             case .success(let works):
                 self.isLoading = false
                 self.books = works.works
-            case .failure(let error): break
+            case .failure(let error):
+                self.isLoading = false
+                self.errorToast = Toast(type: .error, title: "Oops! Something went wrong.", message: "It seems that we're having trouble loading the content right now due to the following error: \(error.localizedDescription)", duration: 10.0)
             }
         }
     }

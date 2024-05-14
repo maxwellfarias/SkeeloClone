@@ -18,7 +18,7 @@ struct Toast: Equatable {
     var type: ToastStyle
     var title: String
     var message: String
-    var duration: Double = 3
+    var duration: Double = 5.0
 }
 
 extension ToastStyle {

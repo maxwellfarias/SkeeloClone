@@ -111,6 +111,7 @@ struct ExploreDetailListView: View {
             viewModel.fecthCategory(id: category.id)
         }
         .background(.white)
+        .toastView(toast: $viewModel.errorToast)
     }
 }
 
