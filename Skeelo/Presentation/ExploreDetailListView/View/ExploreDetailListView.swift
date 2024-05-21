@@ -24,6 +24,7 @@ struct ExploreDetailListView: View {
             
             SKLHeaderView(title: category.name)
                 .padding(.leading, 10)
+                .padding(.top, 15)
             
             SKLFilterPickerView(tags: ["My Books", "Available for exchange", "Skeelo Store"])
                 .padding([.top, .leading], 10)

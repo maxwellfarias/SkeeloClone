@@ -107,4 +107,5 @@ struct DetailBookLoadingView: View {
 
 #Preview {
     DetailBookLoadingView()
+        .background(.white)
 }

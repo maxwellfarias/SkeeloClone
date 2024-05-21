@@ -45,9 +45,14 @@
 		C4B8A5CD2BE216D000DAB82C /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5CC2BE216D000DAB82C /* TabBarView.swift */; };
 		C4B8A5D22BE21AD000DAB82C /* SkeeloColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5D12BE21AD000DAB82C /* SkeeloColor.swift */; };
 		C4B8A5D42BE21CFD00DAB82C /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A5D32BE21CFD00DAB82C /* ExploreView.swift */; };
+		C4CCAAF72BF64C0300E9D1FC /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CCAAF62BF64C0300E9D1FC /* SearchBarView.swift */; };
 		C4E43C722BEFA58D003130AD /* DetailBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E43C712BEFA58D003130AD /* DetailBookViewModel.swift */; };
 		C4E61CA92BE2DB0A0031CA57 /* ExploreDetailListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E61CA82BE2DB0A0031CA57 /* ExploreDetailListViewModel.swift */; };
 		C4E61CAE2BE2DBD70031CA57 /* ExploreDetailListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E61CAD2BE2DBD70031CA57 /* ExploreDetailListView.swift */; };
+		C4F4AD082BFC2D2D004FACBA /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F4AD072BFC2D2D004FACBA /* Tab.swift */; };
+		C4F4AD0A2BFC2F68004FACBA /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F4AD092BFC2F68004FACBA /* Home.swift */; };
+		C4F4AD0C2BFC4485004FACBA /* TabShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F4AD0B2BFC4485004FACBA /* TabShape.swift */; };
+		C4F4AD0E2BFC4F6A004FACBA /* TabPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F4AD0D2BFC4F6A004FACBA /* TabPosition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,9 +112,14 @@
 		C4B8A5CC2BE216D000DAB82C /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		C4B8A5D12BE21AD000DAB82C /* SkeeloColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeeloColor.swift; sourceTree = "<group>"; };
 		C4B8A5D32BE21CFD00DAB82C /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		C4CCAAF62BF64C0300E9D1FC /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		C4E43C712BEFA58D003130AD /* DetailBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBookViewModel.swift; sourceTree = "<group>"; };
 		C4E61CA82BE2DB0A0031CA57 /* ExploreDetailListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreDetailListViewModel.swift; sourceTree = "<group>"; };
 		C4E61CAD2BE2DBD70031CA57 /* ExploreDetailListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreDetailListView.swift; sourceTree = "<group>"; };
+		C4F4AD072BFC2D2D004FACBA /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
+		C4F4AD092BFC2F68004FACBA /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		C4F4AD0B2BFC4485004FACBA /* TabShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabShape.swift; sourceTree = "<group>"; };
+		C4F4AD0D2BFC4F6A004FACBA /* TabPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPosition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +331,7 @@
 		C4B8A5C92BE2162700DAB82C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C4F4AD042BFC2CF1004FACBA /* Custom Tab Bar */,
 				C43959A22BF28E4F00667301 /* Reusable Views */,
 				C436E7E62BE5912300299883 /* DetailBookView */,
 				C4E61CAA2BE2DB5A0031CA57 /* ExploreDetailListView */,
@@ -407,6 +418,7 @@
 				C48C40812BE31B98003CCF14 /* SKLHeaderView.swift */,
 				C48C40832BE323B5003CCF14 /* SKLMarkerButton.swift */,
 				C48C40852BE328B6003CCF14 /* SKLFilterPickerView.swift */,
+				C4CCAAF62BF64C0300E9D1FC /* SearchBarView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -417,6 +429,33 @@
 				C4E61CA82BE2DB0A0031CA57 /* ExploreDetailListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C4F4AD042BFC2CF1004FACBA /* Custom Tab Bar */ = {
+			isa = PBXGroup;
+			children = (
+				C4F4AD062BFC2D14004FACBA /* Model */,
+				C4F4AD052BFC2D0B004FACBA /* View */,
+			);
+			path = "Custom Tab Bar";
+			sourceTree = "<group>";
+		};
+		C4F4AD052BFC2D0B004FACBA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C4F4AD092BFC2F68004FACBA /* Home.swift */,
+				C4F4AD0B2BFC4485004FACBA /* TabShape.swift */,
+				C4F4AD0D2BFC4F6A004FACBA /* TabPosition.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C4F4AD062BFC2D14004FACBA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C4F4AD072BFC2D2D004FACBA /* Tab.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -571,6 +610,7 @@
 				C4B8A5BC2BE1E61300DAB82C /* HttpPostClient.swift in Sources */,
 				C48C40842BE323B5003CCF14 /* SKLMarkerButton.swift in Sources */,
 				C4B8A5C32BE1E75B00DAB82C /* BookByThemeModel.swift in Sources */,
+				C4F4AD082BFC2D2D004FACBA /* Tab.swift in Sources */,
 				C436E7ED2BE5E77F00299883 /* ReviewsView.swift in Sources */,
 				C423DEF52BE6AE36002A4C9C /* ReviewView.swift in Sources */,
 				C48C408D2BE32F20003CCF14 /* URLConstant.swift in Sources */,
@@ -581,11 +621,15 @@
 				C436E7EB2BE5D40800299883 /* HorizontalDetailView.swift in Sources */,
 				C4B8A5872BE1666200DAB82C /* SkeeloApp.swift in Sources */,
 				C48C40862BE328B6003CCF14 /* SKLFilterPickerView.swift in Sources */,
+				C4F4AD0E2BFC4F6A004FACBA /* TabPosition.swift in Sources */,
+				C4F4AD0C2BFC4485004FACBA /* TabShape.swift in Sources */,
 				C436E7E92BE5913F00299883 /* DetailBookView.swift in Sources */,
 				C4B8A5D22BE21AD000DAB82C /* SkeeloColor.swift in Sources */,
 				C48C407D2BE2E618003CCF14 /* UseCaseFactory.swift in Sources */,
 				C43959A12BF28D5300667301 /* Toast.swift in Sources */,
+				C4F4AD0A2BFC2F68004FACBA /* Home.swift in Sources */,
 				C4B8A5C52BE1F0AB00DAB82C /* BookModel.swift in Sources */,
+				C4CCAAF72BF64C0300E9D1FC /* SearchBarView.swift in Sources */,
 				C436E7EF2BE5EBCA00299883 /* Review.swift in Sources */,
 				C4E61CAE2BE2DBD70031CA57 /* ExploreDetailListView.swift in Sources */,
 				C43959AC2BF2E9EB00667301 /* ExploreDetailListViewLoading.swift in Sources */,

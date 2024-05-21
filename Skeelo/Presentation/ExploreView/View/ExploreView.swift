@@ -19,34 +19,8 @@ struct ExploreView: View {
                 .foregroundStyle(.black)
 
             
-            ZStack(alignment: .trailing) {
-                
-                NavigationLink {
-                    Text("Another View")
-                } label: {
-                    Text ("What would you like to read?")
-                        .font(.subheadline)
-                        .fontWeight(.light)
-                        .foregroundStyle(SkeeloColor.lightGray100)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding()
-                        .background(RoundedRectangle(cornerRadius: 10, style: .continuous)
-                            .stroke(SkeeloColor.lightGray, lineWidth: 1)
-                            .frame(height: 40))
-                }
-                
-                Button {
-                    
-                } label: {
-                    Image(systemName: "magnifyingglass")
-                        .foregroundStyle(.black)
-                        .font(.title3)
-                        .padding(.trailing, 15)
-                }
-            }
-            .frame(maxWidth: .infinity)
-            .padding(.bottom, 10)
-            .padding(.top, 7)
+            SearchBarView()
+                .padding(.top, 27)
             
             ScrollView(.vertical, showsIndicators: false) {
                 LazyVGrid(columns: Array(repeating: .init(.flexible()), count:2), alignment: .center, spacing: 10) {
