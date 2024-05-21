@@ -7,9 +7,16 @@
 
 import SwiftUI
 
+//Custom Tab Shape
 struct TabShape: Shape {
 
     var midpoint: CGFloat
+    
+//    Adding Shape Animation
+    var animatableData: CGFloat {
+        get {midpoint}
+        set {midpoint = newValue}
+    }
     
     func path(in rect: CGRect) -> Path {
         return Path { path in

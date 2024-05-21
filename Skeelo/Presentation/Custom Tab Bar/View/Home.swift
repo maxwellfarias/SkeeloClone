@@ -15,28 +15,29 @@ struct Home: View {
     
     var body: some View {
         
-        VStack(spacing: 0) {
-            
-            TabView(selection: $activeTab){
-                Text("Home")
-                    .tag(Tab.home)
-                    .toolbar(.hidden, for: .tabBar)
+        NavigationStack {
+            ZStack(alignment: .bottom) {
                 
-                Text("Bookshelf")
-                    .tag(Tab.bookshelf)
-                    .toolbar(.hidden, for: .tabBar)
+                TabView(selection: $activeTab){
+                    Text("Home")
+                        .tag(Tab.home)
+                        .toolbar(.hidden, for: .tabBar)
+                        
+                    Text("Bookshelf")
+                        .tag(Tab.bookshelf)
+                        .toolbar(.hidden, for: .tabBar)
+                    
+                    ExploreView()
+                        .tag(Tab.explore)
+                        .toolbar(.hidden, for: .tabBar)
+                    
+                    Text("Profile")
+                        .tag(Tab.profile)
+                        .toolbar(.hidden, for: .tabBar)
+                }
                 
-                Text("Explore")
-                    .tag(Tab.explore)
-                    .toolbar(.hidden, for: .tabBar)
-                
-                Text("Profile")
-                    .tag(Tab.profile)
-                    .toolbar(.hidden, for: .tabBar)
+               CustomTabBar()
             }
-            
-           CustomTabBar()
-            
         }
     }
     

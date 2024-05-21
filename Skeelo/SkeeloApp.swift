@@ -11,7 +11,7 @@ import SwiftUI
 struct SkeeloApp: App {
     var body: some Scene {
         WindowGroup {
-            TabBarView()
+            Home()
         }
     }
 }

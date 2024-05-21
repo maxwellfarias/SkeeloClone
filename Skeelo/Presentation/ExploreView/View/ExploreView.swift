@@ -34,13 +34,17 @@ struct ExploreView: View {
                     }
                 }
                 .padding(.top, 15)
+                .padding(.bottom, 100)
             }
+//
             
             Spacer()
+                
         }
         .padding(.horizontal, 15)
         .padding(.top, 12)
         .background(.white)
+//
         
     }
 }
