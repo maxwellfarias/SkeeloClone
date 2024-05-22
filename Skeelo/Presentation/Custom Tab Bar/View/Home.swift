@@ -20,10 +20,16 @@ struct Home: View {
                 
                 TabView(selection: $activeTab){
                     Text("Home")
+                        .foregroundStyle(.black)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(.white)
                         .tag(Tab.home)
                         .toolbar(.hidden, for: .tabBar)
-                        
+                    
                     Text("Bookshelf")
+                        .foregroundStyle(.black)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(.white)
                         .tag(Tab.bookshelf)
                         .toolbar(.hidden, for: .tabBar)
                     
@@ -32,12 +38,16 @@ struct Home: View {
                         .toolbar(.hidden, for: .tabBar)
                     
                     Text("Profile")
+                        .foregroundStyle(.black)
+                        .frame(maxWidth: .infinity, maxHeight: .infinity)
+                        .background(.white)
                         .tag(Tab.profile)
                         .toolbar(.hidden, for: .tabBar)
                 }
                 
-               CustomTabBar()
+                CustomTabBar()
             }
+            .ignoresSafeArea(.keyboard)
         }
     }
     
@@ -49,9 +59,9 @@ struct Home: View {
                 TabItem(
                     tint: tint,
                     inactiveTint: inactiveTint,
-                    tab: $0, 
+                    tab: $0,
                     animation: animation,
-                    activeTab: $activeTab, 
+                    activeTab: $activeTab,
                     position: $tabShapePosition
                 )
             }
@@ -63,8 +73,7 @@ struct Home: View {
                 .fill(.white)
                 .ignoresSafeArea()
                 .shadow(color: tint.opacity(0.2), radius: 5, x: 0, y: -5)
-                .blur(radius: 2)
-                .padding(.top, 25)
+                .padding(.top, 30)
         }
         .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7), value: activeTab)
     }
@@ -102,14 +111,17 @@ struct TabItem: View {
         .contentShape(Rectangle())
         .viewPosition(completion: { rect in
             tabPosition.x = rect.midX
-            
-//            Updating Active Tab Position
+            //            Updating Active Tab Position
             if activeTab == tab {
                 position.x = rect.midX
             }
         })
         .onTapGesture {
             activeTab = tab
+            
+            withAnimation(.interactiveSpring(response: 0.6, dampingFraction: 0.7, blendDuration: 0.7)) {
+                position.x = tabPosition.x
+            }
         }
     }
 }

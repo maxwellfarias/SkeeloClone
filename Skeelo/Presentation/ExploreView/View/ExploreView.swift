@@ -36,7 +36,6 @@ struct ExploreView: View {
                 .padding(.top, 15)
                 .padding(.bottom, 100)
             }
-//
             
             Spacer()
                 
@@ -44,7 +43,6 @@ struct ExploreView: View {
         .padding(.horizontal, 15)
         .padding(.top, 12)
         .background(.white)
-//
         
     }
 }
