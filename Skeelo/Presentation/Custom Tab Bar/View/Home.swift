@@ -9,15 +9,13 @@ import SwiftUI
 
 struct Home: View {
     
-    @State private var activeTab: Tab = .home
     @Namespace private var animation
+    @State private var activeTab: Tab = .home
     @State private var tabShapePosition: CGPoint = .zero
-    
+   
     var body: some View {
         
-        NavigationStack {
-            ZStack(alignment: .bottom) {
-                
+            ZStack(alignment: .bottom){
                 TabView(selection: $activeTab){
                     Text("Home")
                         .foregroundStyle(.black)
@@ -35,7 +33,6 @@ struct Home: View {
                     
                     ExploreView()
                         .tag(Tab.explore)
-                        .toolbar(.hidden, for: .tabBar)
                     
                     Text("Profile")
                         .foregroundStyle(.black)
@@ -48,7 +45,7 @@ struct Home: View {
                 CustomTabBar()
             }
             .ignoresSafeArea(.keyboard)
-        }
+            .border(.black)
     }
     
     @ViewBuilder
@@ -116,6 +113,7 @@ struct TabItem: View {
                 position.x = rect.midX
             }
         })
+        .modifier(SizeModifier())
         .onTapGesture {
             activeTab = tab
             

@@ -26,8 +26,30 @@ extension View {
                     
                     Color.clear
                         .preference(key: PositionKey.self, value: rect)
-                        .onPreferenceChange(PositionKey.self, perform: completion)
+                        
                 }
             }
+            .onPreferenceChange(PositionKey.self, perform: completion)
+    }
+}
+
+
+struct SizePreferenceKey: PreferenceKey {
+    static var defaultValue: CGRect = .zero
+
+    static func reduce(value: inout CGRect, nextValue: () -> CGRect) {
+        value = nextValue()
+    }
+}
+
+struct SizeModifier: ViewModifier {
+    private var sizeView: some View {
+        GeometryReader { geometry in
+            Color.clear.preference(key: SizePreferenceKey.self, value: geometry.frame(in: .global))
+        }
+    }
+
+    func body(content: Content) -> some View {
+        content.background(sizeView)
     }
 }
